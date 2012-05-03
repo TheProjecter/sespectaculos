@@ -4,6 +4,7 @@ session_start();
 $entrada=$_GET['cod'];
 $ofertas=$_GET['cod'];
 $alertas=$_GET['cod'];
+$usuarios=$_GET['cod'];
 $interesado=$_GET['cod'];
 
 $valor=$_GET['eliminar'];
@@ -35,6 +36,22 @@ if($valor=="alertas"){
 	 	
 	$mensaje= '<script name="accion"> alert("Se ha borrado correctamente la Alerta");</script>';
 	echo $mensaje; 
+}
+
+if($valor=="usuarios"){
+	
+	$deleteSQL = sprintf("DELETE  FROM usuarios WHERE dni='$usuarios'");
+	mysql_select_db($database_informeUrb, $informeUrb);
+	$Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());
+	 	
+	$mensaje= '<script name="accion"> alert("Se ha eliminado correctamente al usuario");</script>';
+	echo $mensaje; 
+	session_destroy();
+	?>
+	<script type="text/javascript"> 	 
+	window.location="index.php";
+	</script>
+	<?php 
 }
 
 if($valor=="interesado"){

@@ -42,7 +42,8 @@
    			 <div id="div"> <a class="letraLogin" id="a">Localidad: </a> 		<a id="b"><?php echo $row_Listado['Localidad']; ?></a></div>
    			 <div id="div"> <a class="letraLogin" id="a">Provincia: </a> 		<a id="b"><?php echo $row_Listado['Provincia']; ?></a></div>
    			 <div id="div"> <a class="letraLogin" id="a">Valoracion: </a> 		<a id="b"><?php echo $puntuacion; ?></a></div>
-</div></td>
+</div>
+</td>
 
 <td colspan="2" ><span  style="font-size: 25px;font:bold;">Menu Opciones Usuarios </span></td>
 </tr>
@@ -115,6 +116,12 @@
 		
 		</td>
 		
+</tr>
+<tr>
+<td>
+<div style="margin-left: 15%;"><a href="index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=usuarios&cod=<?php echo $row_Listado['Dni'];?>" ><img src="./vistas/images/delete_user.png" alt="Eliminar Usuario" title="Eliminar Usuario" height="50"></img></a></div>
+<div style="margin-left: 10%;"><span style="font-size: medium;"> Eliminar Usuario</span></div>
+</td>
 </tr>
 </table>
 <div><br></br><br></br><br></br><br></br></div>	

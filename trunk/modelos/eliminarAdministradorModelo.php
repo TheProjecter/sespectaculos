@@ -29,7 +29,7 @@ if($valor=="entradas"){
 
 if($valor=="usuarios"){
 	
-	$deleteSQL = sprintf("DELETE  FROM usuarios WHERE idConsulta='$usuarios'");
+	$deleteSQL = sprintf("DELETE  FROM usuarios WHERE dni='$usuarios'");
 	mysql_select_db($database_informeUrb, $informeUrb);
 	$Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());
 	 	
