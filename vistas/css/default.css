@@ -1,0 +1,264 @@
+
+/* Elements */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF url(../images/img01.gif) repeat-x;
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #666666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+p, blockquote, ul, ol {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Header */
+
+#header {
+	width: 100%;
+	height: 50px;
+	margin: 0 auto;
+}
+
+/* Logo */
+
+#logo {
+	float: left;
+	height: 50px;
+}
+
+#logo h1, #logo h2 {
+	float: left;
+	padding: 2em .25em 0 0;
+	font-size: 1em;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #000000;
+}
+
+/* Menu */
+
+#menu {
+	float: right;
+	height: 30px;
+	border-top: 20px solid #FFFFFF;
+	background: #E1EEFA url(../images/img03.gif) repeat-x left bottom;
+}
+
+#menu ul {
+	margin: 0;
+	padding: .35em 0 0 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	padding: 0 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+#menu a:hover {
+	color: #0088FF;
+}
+
+/* Splash */
+
+#splash {	
+	
+	width: 70%;
+	height: 100%;
+	margin-left: 0% ;
+}
+
+/* Login*/
+
+#login {
+	position:absolute;
+	width: 30%;
+	margin-left:73%;
+	margin-right: 0;
+}
+
+/* Content */
+
+#content {
+	width:90%;
+	margin: 0 auto;
+}
+
+#contentII {
+	margin-left:46%;
+}
+
+#content h2 {
+	height: 25px;
+	padding: 6px 0 0 31px;
+	background: url(../images/img06.gif) no-repeat 10px 10px;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #000000;
+}
+
+#content h3 {
+	font-size: 1em;
+}
+
+#content ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#content li {
+	padding-left: 12px;
+	background: url(../images/img09.gif) no-repeat left center;
+}
+
+#content .content {
+	padding: 10px 31px 20px 31px;
+}
+
+/* Column One */
+
+#colOne {
+	float: left;
+	width: 75%;
+	background: url(../images/img04.gif) repeat-x;
+}
+
+#colOneI {
+	float: left;
+	width: 30%;
+	background: url(../images/img04.gif) repeat-x;
+}
+
+#colOne .boxed {
+	background: url(../images/img07.gif) repeat-x;
+}
+
+/* Column Two */
+
+#colTwo {
+	float: right;
+	width: 25%;
+	background: url(../images/img05.gif) repeat-x;
+}
+
+#colTwoI {
+	float: right;
+	width: 70%;
+	margin-bottom:3%;
+	background: url(../images/img05.gif) repeat-x;
+}
+
+#colTwo .boxed {
+	background: url(../images/img08.gif) repeat-x;
+}
+
+#colTwo .content {
+	padding: 10px;
+}
+
+#colTre {
+	margin-top:2em;
+	font-size: 15px;
+	font:sans-serif 
+	float: right;
+	width: 90%;
+	background: url(../images/img05.gif) repeat-x;
+}
+#colfor {
+	margin-top:2em;
+	font-size: 14px;
+	font:sans-serif 
+	float: right;
+	width: 90%;
+	background: url(../images/img05.gif) repeat-x;
+}
+
+#colTot {
+	margin-left:40%;
+	margin-top:1%;
+	margin-bottom:2%;
+	float: center;
+	width:30%;
+	text-align:center;	
+	background: url(../images/img05.gif) repeat-x;
+}
+
+/* Footer */
+
+#footer {
+	width: 100%;
+	height: 70px;
+	margin: 0 auto;
+	background: #FFFFFF url(../images/img01.gif) repeat-x left bottom;
+}
+
+#footer p {
+	margin: 0;
+	padding: 7px 0 0 0;
+	text-align: center;
+	font-size: x-small;
+	color: #666666;
+}
+
+#footer a {
+	color: #666666;
+}
+
+/* otro css */
+
+.imgTituloTabla{background-image:url(../images/GirsOscuro.png); background-repeat:repeat-x; height:30px;}
+.tituloTabla{color:#FFFFFF; font-family:"Trebuchet MS", "Eras Medium ITC"; font-size:15px; font-weight:600; position:relative; left:10px;}
+.bordeTablaGris{border:#999999 1px solid; background-color:#F4F4F4;   } 
+
+.letraLogin{
+			font-family:"Trebuchet MS", "Eras Medium ITC" ;
+			font-size:13px; 
+			font-weight:600; 
+			color:#404040;
+}
+.letraLogin2{
+			font-family:"Trebuchet MS", "Eras Medium ITC" ;
+			font-size:12px; 
+			font-weight:300; 
+			color:#404040;
+}
+
+.letraLogin3{
+			font-family:"Trebuchet MS", "Eras Medium ITC" ;
+			font-size:15px; 
+			font-weight:300; 
+			color:#404040;
+}
+
+.letraLogin4{
+			font-family:"Trebuchet MS", "Eras Medium ITC" ;
+			font-size:16px; 
+			font-weight:300; 
+			color:#404040;
+}
