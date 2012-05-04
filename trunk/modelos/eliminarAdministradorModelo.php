@@ -62,9 +62,9 @@ if($valor=="informacion"){
 	$Listado = mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 	$row_Listado = mysql_fetch_assoc($Listado);
 	
-	echo "Ruta: ".$row_Listado['Ruta'];
+	if($row_Listado['Ruta']!=""){
 	unlink($row_Listado['Ruta']);
-	
+	}
 	$deleteSQL = sprintf("DELETE  FROM infEspectaculos WHERE idInformacion='$informacion'");
 	mysql_select_db($database_informeUrb, $informeUrb);
 	$Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());
