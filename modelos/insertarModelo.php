@@ -101,7 +101,7 @@ $row_Listado5= mysql_fetch_assoc($Listado5);
 do{ 
 	if ($row_Listado5['idConsulta'] != null || $row_Listado5['idConsulta'] != ""){
 		$url=" ";
-  	    if($row_Listado5['Fecha1']!="0000-00-00"){$url="Fecha1='".$row_Listado5['Fecha1']."'";}
+  	    if($row_Listado5['Fecha1']!="0000-00-00"){$url="&& Fecha1='".$row_Listado5['Fecha1']."'";}
 		if($row_Listado5['Fecha2']!="0000-00-00"){$url=$url." && Fecha2='".$row_Listado5['Fecha2']."'";}     
   		if(isset($row_Listado5['Evento']) && $row_Listado5['Evento']!=" ")      { $url=$url." && Evento='".$row_Listado5['Evento']."'"; }
 		if(isset($row_Listado5['Provincia']) && $row_Listado5['Provincia']!="")   {$url=$url." && Provincia='".$row_Listado5['Provincia']."'";}
@@ -111,7 +111,7 @@ do{
 		
 		echo $url;
 		mysql_select_db($database_informeUrb,$informeUrb);
-		$query_Listado = "SELECT * FROM consultas where ".$url." ";
+		$query_Listado = "SELECT * FROM consultas where  1=1 ".$url." ";
 		$query_limit_Listado = sprintf("%s LIMIT %d, %d", $query_Listado, $startRow_Listado, $maxRows_Listado);
 		$Listado = mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 		$row_Listado= mysql_fetch_assoc($Listado);	  	

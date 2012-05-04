@@ -3,12 +3,12 @@
 <?
 $lognick=$_SESSION['usuario'];
 $idUsuario=$_SESSION['dni'];
-//echo "ola".$idUsuario;
+
 $currentPage = $_SERVER["PHP_SELF"];
 $maxRows_Listado = 5;
 $pageNum_Listado = 0;
 if (isset($_GET['pageNum_Listado'])) {
-  $pageNum_Listado2 = $_GET['pageNum_Listado'];
+  $pageNum_Listado = $_GET['pageNum_Listado'];
 }
 $startRow_Listado = $pageNum_Listado * $maxRows_Listado;
 
@@ -26,7 +26,7 @@ $row_Listado = mysql_fetch_assoc($Listado);
 	  $all_Listado = mysql_query($query_Listado);
 	  $totalRows_Listado2 = mysql_num_rows($all_Listado);
 	}
-	$totalPages_Listado2 = ceil($totalRows_Listado2/$maxRows_Listado)-1;
+	$totalPages_Listado = ceil($totalRows_Listado2/$maxRows_Listado)-1;
 	
 	$queryString_Listado = "";
 	if (!empty($_SERVER['QUERY_STRING'])) {

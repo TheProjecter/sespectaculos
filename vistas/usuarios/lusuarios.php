@@ -49,8 +49,13 @@ function confirmar ( mensaje ) {
 		mysql_select_db($database_informeUrb,$informeUrb);
 		$query_Listado1 = "Select * from usuarios,entradas where Dni=dniUsuario and codEntrada='$cod'";
 		$Listado1 = mysql_query($query_Listado1, $informeUrb) or die(mysql_error());
-		$row_Listado1 = mysql_fetch_assoc($Listado1);	 ?>
-    
+		$row_Listado1 = mysql_fetch_assoc($Listado1);
+		
+		
+if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniaceptado){
+	$true='false';
+	?>
+			    
     <tr class="colorFila" align="center">       
       <td><?php echo $row_Listado1['Nombre']; ?></td>
       <td><?php echo $row_Listado1['Apellidos']; ?></td>
@@ -58,7 +63,7 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado1['Evento']; ?></td>
       <td><a href="index.php?controlador=opcionesUsuario&opcion=cuestionario&cod=<?php echo $row_Listado1['Dni']?>&cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" align="absmiddle" alt="MODIFICAR"/></a></td>  
     </tr>
-   <?php }while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
+  <?php  }}while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
   
   <table border="0" width="50%" align="center">
@@ -82,7 +87,7 @@ function confirmar ( mensaje ) {
   </tr>
  
 </table>
-<?php if($totalRows_Listado==0 || $totalRows_Listado== null){?><div><br></br><a style="margin-left: 45%;font-size: medium;"><?php  echo "No tienes valoraciones pendiente";} ?> </a></div>
+<?php if($totalRows_Listado==0 || $totalRows_Listado== null || $true==""){?><div><br></br><a style="margin-left: 45%;font-size: medium;"><?php  echo "No tienes valoraciones pendiente";} ?> </a></div>
 <div><br></br><br></br></div>
 <div><a href="index.php?controlador=opcionesUsuario&opcion=svaloracion"><img alt="100" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 
