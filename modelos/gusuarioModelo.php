@@ -3,12 +3,12 @@
 <?php
 $lognick=$_SESSION['usuario'];
 $currentPage = $_SERVER["PHP_SELF"];
-$maxRows_Listado = 10;
-$pageNum_Listado1 = 0;
-if (isset($_GET['pageNum_Listado1'])) {
-  $pageNum_Listado1 = $_GET['pageNum_Listado1'];
+$maxRows_Listado = 15;
+$pageNum_Listado = 0;
+if (isset($_GET['pageNum_Listado'])) {
+  $pageNum_Listado = $_GET['pageNum_Listado'];
 }
-$startRow_Listado = $pageNum_Listado1 * $maxRows_Listado;
+$startRow_Listado = $pageNum_Listado * $maxRows_Listado;
 
 //obtenemos todos los usuarios de la base de datos
 
@@ -49,5 +49,4 @@ $queryString_Listado = sprintf("&totalRows_Listado=%d%s", $totalRows_Listado, $q
 $deleteSQL = sprintf("DELETE  FROM usuarios WHERE Valor_Admin!=9 && Activado!=1 && fecha_Alta BETWEEN (DATE_SUB(now(),INTERVAL 50 DAY)) AND (DATE_SUB(now(),INTERVAL 3 DAY)) ");
 mysql_select_db($database_informeUrb, $informeUrb);
 $Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());
-
 ?>

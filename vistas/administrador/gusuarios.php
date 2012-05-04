@@ -58,28 +58,28 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado['Email']; ?></td>
       <td><?php echo $row_Listado['Activado']; ?></td>
  	  <td><?php echo $row_Listado['puntuacion']; ?></td>
- 	  <td><a href="index.php?controlador=opcionesAdministrador&opcion=comentarios&cod=<?php echo $row_Listado['Dni']?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" align="absmiddle" alt="MODIFICAR"/></a></td>  
- 	  <td><a href="index.php?controlador=opcionesAdministrador&opcion=borrar&eliminar=usuarios&cod=<?php echo $row_Listado['Dni']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" border="0" align="absmiddle" alt="ELIMINAR"/></a></td>     
+ 	  <td><a href="index.php?controlador=opcionesAdministrador&opcion=comentarios&cod=<?php echo $row_Listado['Dni']?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" alt="MODIFICAR"/></a></td>  
+ 	  <td><a href="index.php?controlador=opcionesAdministrador&opcion=borrar&eliminar=usuarios&cod=<?php echo $row_Listado['Dni']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td>     
     </tr>
    <?php }  while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
   
   <table border="0" width="50%" align="center">
   <tr>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></img></a>
           <?php } // Show if not first page ?>
     </td>
-    <td width="31%" align="center"><?php if ($pageNum_Listado1 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, max(0, $pageNum_Listado1 - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></img></a>
+    <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></img></a>
           <?php } // Show if not first page ?>
     </td>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado1 + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></img></a>
           <?php } // Show if not last page ?>
     </td>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>
