@@ -33,7 +33,7 @@ if($row_Listado==""){
 	?>
 	<script>
 	alert("El usuario no tiene permiso para acceder a la aplicacion");
-  	parent.location.href="../index.php";
+  	parent.location.href="index.php";
   				
   	</script><?php
 }

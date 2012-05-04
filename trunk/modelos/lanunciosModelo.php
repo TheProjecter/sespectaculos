@@ -3,23 +3,19 @@
 <?php
 
 $lognick=$_SESSION['usuario'];
-
-//echo "dni".$idUsuario;
 $currentPage = $_SERVER["PHP_SELF"];
-
 $maxRows_Listado = 15;
-$pageNum_Listado1 = 0;
-if (isset($_GET['pageNum_Listado1'])) {
-  $pageNum_Listado1 = $_GET['pageNum_Listado1'];
+$pageNum_Listado = 0;
+if (isset($_GET['pageNum_Listado'])) {
+  $pageNum_Listado = $_GET['pageNum_Listado'];
 }
-$startRow_Listado = $pageNum_Listado1 * $maxRows_Listado;
+$startRow_Listado = $pageNum_Listado * $maxRows_Listado;
 
 mysql_select_db($database_informeUrb,$informeUrb);
 $query_Listado = "Select * from infespectaculos";
 $query_limit_Listado = sprintf("%s LIMIT %d, %d", $query_Listado, $startRow_Listado, $maxRows_Listado);
 $Listado = mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 $row_Listado = mysql_fetch_assoc($Listado);
-
 
 //Para avanzar y retroceder, flechas
 
