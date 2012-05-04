@@ -58,8 +58,8 @@ function confirmar ( mensaje ) {
       <td >&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -101,6 +101,26 @@ function confirmar ( mensaje ) {
 <?php }else{?>
 <tr><td align="center"><a>No tiene ningun comentario</a></td></tr>
 <?php }?>
+</table>
+ <table border="0" width="50%" align="center">
+  <tr>
+    <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif"></img></a>
+          <?php } // Show if not first page ?>
+    </td>
+    <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif"></img></a>
+          <?php } // Show if not first page ?>
+    </td>
+    <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif"></img></a>
+          <?php } // Show if not last page ?>
+    </td>
+    <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif"></img></a>
+          <?php } // Show if not last page ?>
+    </td>
+  </tr>
 </table>
 </CENTER>
 
