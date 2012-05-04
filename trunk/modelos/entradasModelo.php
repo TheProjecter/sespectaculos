@@ -5,7 +5,7 @@ $lognick=$_SESSION['usuario'];
 $idUsuario=$_SESSION['dni'];
 
 $currentPage = $_SERVER["PHP_SELF"];
-$maxRows_Listado = 5;
+$maxRows_Listado = 15;
 $pageNum_Listado = 0;
 if (isset($_GET['pageNum_Listado'])) {
   $pageNum_Listado = $_GET['pageNum_Listado'];

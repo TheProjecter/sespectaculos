@@ -3,7 +3,7 @@
 <?php
 $lognick=$_SESSION['usuario'];
 $currentPage = $_SERVER["PHP_SELF"];
-$maxRows_Listado = 2;
+$maxRows_Listado = 15;
 $pageNum_Listado = 0;
 if (isset($_GET['pageNum_Listado'])) {
   $pageNum_Listado = $_GET['pageNum_Listado'];
@@ -27,7 +27,7 @@ if (isset($_GET['totalRows_Listado'])) {
   $all_Listado = mysql_query($query_Listado);
   $totalRows_Listado = mysql_num_rows($all_Listado);
 }
-$totalPages_Listado = ceil($totalRows_Listado/$maxRows_Listado);
+$totalPages_Listado = ceil($totalRows_Listado/$maxRows_Listado)-1;
 
 $queryString_Listado = "";
 if (!empty($_SERVER['QUERY_STRING'])) {

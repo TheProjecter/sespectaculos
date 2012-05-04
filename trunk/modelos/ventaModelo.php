@@ -13,7 +13,7 @@ if(isset($row_Listado3['codEntrada'])){?>
 	<script>parent.location.href="index.php?controlador=opcionesUsuario&opcion=fallo";</script><?php 
 }
 
-$login4 = ("select * from aceptada where codEntradas='$var1' and dniUsuario='$dni'");
+$login4 = ("select * from aceptada where codEntradas='$var1' and dniUsuarios='$dni'");
 $resultado4 = mysql_query($login4, $informeUrb) or die(mysql_error());
 $row_Listado4 = mysql_fetch_assoc($resultado4);
 
