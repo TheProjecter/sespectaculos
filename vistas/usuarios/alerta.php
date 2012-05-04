@@ -110,7 +110,7 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
 	do {
 		if ($row_Listado['idConsulta'] != null || $row_Listado['idConsulta'] != ""){
 			$url="";
-			if($row_Listado['Fecha1']!="0000-00-00"){$url="Fecha1=".$row_Listado['Fecha1'];}
+			if($row_Listado['Fecha1']!="0000-00-00"){$url="&Fecha1=".$row_Listado['Fecha1'];}
 			if($row_Listado['Fecha2']!="0000-00-00"){$url=$url."&Fecha2=".$row_Listado['Fecha2'];}
 			if(isset($row_Listado['Evento']) && $row_Listado['Evento']!="")      { $url=$url."&Evento=".$row_Listado['Evento']; }
 			if(isset($row_Listado['Provincia']) && $row_Listado['Provincia']!="")   {$url=$url."&Provincia=".$row_Listado['Provincia'];}
@@ -125,7 +125,7 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
 		<td><?php echo $row_Listado['Provincia']; ?></td>
 		<td><?php echo $row_Listado['Lugar']; ?></td>
 		<td><a
-			href="index.php?controlador=opcionesUsuario&opcion=buscar&<?php echo $url;?>"><img
+			href="index.php?controlador=opcionesUsuario&opcion=buscar<?php echo $url;?>"><img
 			src="./vistas/img/edit_f2.png" title="MODIFICAR" border="0"
 			alt="MODIFICAR" /></a></td>
 		<td><a
