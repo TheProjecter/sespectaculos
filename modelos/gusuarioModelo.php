@@ -26,8 +26,7 @@ if (isset($_GET['totalRows_Listado'])) {
   $all_Listado = mysql_query($query_Listado);
   $totalRows_Listado = mysql_num_rows($all_Listado);
 }
-$totalPages_Listado = ceil($totalRows_Listado/$maxRows_Listado);
-
+$totalPages_Listado = ceil($totalRows_Listado/$maxRows_Listado)-1;
 $queryString_Listado = "";
 if (!empty($_SERVER['QUERY_STRING'])) {
   $params = explode("&", $_SERVER['QUERY_STRING']);

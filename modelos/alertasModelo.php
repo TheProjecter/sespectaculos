@@ -10,7 +10,7 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 //nos genera todas la provincias de españa
-$maxRows_Listado = 30;
+$maxRows_Listado = 15;
 $pageNum_Listado = 0;
 if (isset($_GET['pageNum_Listado'])) {
   $pageNum_Listado = $_GET['pageNum_Listado'];
