@@ -58,8 +58,8 @@
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     </table>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <table align="center" width="35%" >   
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>

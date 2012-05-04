@@ -12,13 +12,6 @@ if (isset($_GET['pageNum_Listado'])) {
 }
 $startRow_Listado = $pageNum_Listado * $maxRows_Listado;
 
-$maxRows_Listado1 = 15;
-$pageNum_Listado1 = 0;
-if (isset($_GET['pageNum_Listado1'])) {
-  $pageNum_Listado1 = $_GET['pageNum_Listado1'];
-}
-$startRow_Listado1 = $pageNum_Listado1 * $maxRows_Listado1;
-
 mysql_select_db($database_informeUrb,$informeUrb);
 $query_Listado = "Select * from entradas e ,ofertas o  where o.dniUsuario='$idUsuario' && e.codEntrada=o.codEntrada";
 $query_limit_Listado = sprintf("%s LIMIT %d, %d", $query_Listado, $startRow_Listado, $maxRows_Listado);

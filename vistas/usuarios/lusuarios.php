@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,7 +8,7 @@
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
-<script language="javascript" src="../login/programas.js" type="text/javascript"></script>
+<script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
 <script>
 function confirmar ( mensaje ) {
 	return confirm( mensaje );
@@ -24,13 +25,57 @@ function confirmar ( mensaje ) {
 	<div id="menu">
 		<ul>
 			<li><a href="index.php" accesskey="1" title="Inicio">Inicio</a></li>
-			<li><a href="index.php?controlador=administrador" accesskey="3" title="Administracion">Administracion	</a></li>
+			<li><a href="#" accesskey="2" title="Login" onclick="funcion1a()">Login</a></li>
+			<li><a href="index.php?controlador=acceso" accesskey="3" title="Administracion">Administracion	</a></li>
 			<li><a href="./vistas/foro/index.php" accesskey="4" title="Sobre Nosotros">Foro</a></li>
 			<li><a href="./vistas/contacto/contactform.htm" accesskey="5" title="Contacta">Contacta</a></li>
 		</ul>
 	</div>
 </div>
 
+<div id="login">
+<div id="tabla2" style="display:none;">  
+  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+    <table align="center" width="68%">
+	<tr>
+		<td class="imgTituloTabla">
+			<div class="tituloTabla">Panel Control</div>
+		</td>
+	</tr>
+	</table>
+	<?php if (!isset($_SESSION['usuario'])) {?>
+	<table align="center" width="25%" class="bordeTablaGris">
+	<tr valign="baseline">
+      <td align="right" class="letraLogin">Usuario:</td>
+      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+    </tr>
+    <tr valign="baseline">
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+    </tr>     
+  </table>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <table align="center">
+    <tr valign="baseline">
+      <td >&nbsp;</td>
+     <td> <input type="submit" class="boton" value="Ingresar"></input></td>
+    </tr>
+    <?php }else{?>
+    <table align="center" width="35%">
+    	<tr><td><?php 
+    	echo "Usuario:".$_SESSION['usuario'];
+    	?>
+    	</td>
+    	</tr> 
+    	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
+        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
+    <?php 
+    } ?>
+   </table>   
+  	</table>
+      </form>
+  	</div>
+</div>
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
     
@@ -68,20 +113,20 @@ if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniacepta
   
   <table border="0" width="50%" align="center">
   <tr>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></img></a>
           <?php } // Show if not first page ?>
     </td>
-    <td width="31%" align="center"><?php if ($pageNum_Listado1 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, max(0, $pageNum_Listado1 - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></img></a>
+    <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></img></a>
           <?php } // Show if not first page ?>
     </td>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado1 + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></img></a>
           <?php } // Show if not last page ?>
     </td>
-    <td width="23%" align="center"><?php if ($pageNum_Listado1 +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></img></a>
+    <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>

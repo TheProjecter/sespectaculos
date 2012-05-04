@@ -52,18 +52,18 @@
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
-      <td nowrap align="">&nbsp;</td>
+      <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    	<table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
     	</td>
     	</tr> 
     	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
-        <td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td>
+        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
    </table>   
@@ -72,7 +72,7 @@
   	</div>
 </div>
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
-<br></br>
+<div><br></br></div>
 
 <table border="0" align="center" width="100%">
 <?php
@@ -102,7 +102,7 @@ if ($row_Listado['idEntrada'] != null || $row_Listado['idEntrada'] != ""){
   if ($row_Listado['idEntrada'] != null || $row_Listado['idEntrada'] != ""){
   ?>
     <tr class="colorFila" align="center">
-    <td><a href="index.php?controlador=opcionesUsuario&opcion=vendedor&entrada=<?php echo $row_Listado['codEntrada']?>"><img src="./vistas/img/edit_f2.png" title="oferta" border="0" align="absmiddle" alt="oferta"/></a></td>
+    <td><a href="index.php?controlador=opcionesUsuario&opcion=vendedor&entrada=<?php echo $row_Listado['codEntrada']?>"><img src="./vistas/img/edit_f2.png" title="oferta"  alt="oferta"/></a></td>
       <td><?php echo $row_Listado['Evento']; ?></td>
       <td><?php echo $row_Listado['Provincia']; ?></td>
       <td><?php echo $row_Listado['Lugar']; ?></td>  
@@ -120,19 +120,19 @@ if ($row_Listado['idEntrada'] != null || $row_Listado['idEntrada'] != ""){
   <table border="0" width="50%" align="center">
   <tr>
     <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif"></img></a>
           <?php } // Show if not last page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif"></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>

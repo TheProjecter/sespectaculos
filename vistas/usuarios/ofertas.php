@@ -52,7 +52,7 @@ function confirmar ( mensaje ) {
       <td><input type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
-      <td  align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
       <td><input type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
@@ -62,8 +62,8 @@ function confirmar ( mensaje ) {
       <td >&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <table align="center" width="35%">
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -71,9 +71,9 @@ function confirmar ( mensaje ) {
     	</tr> 
     	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
+	</table>   
     <?php 
-    } ?>
-   </table>   
+    } ?>      
   	</table>
       </form>
   	</div>
@@ -100,7 +100,7 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado['Lugar']; ?></td>
       <td><?php echo $row_Listado['Precio']; ?></td>
 	  <td><?php echo $row_Listado['estado']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=ofertas&cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" border="0" align="absmiddle" alt="ELIMINAR"/></a></td> 
+      <td><a href="index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=ofertas&cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td> 
      
     </tr>
    <?php } } while ($row_Listado = mysql_fetch_assoc($Listado));} ?>
@@ -109,19 +109,19 @@ function confirmar ( mensaje ) {
   <table border="0" width="50%" align="center">
   <tr>
     <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage1, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" ></img></a>
           <?php } // Show if not last page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado1=%d%s", $currentPage1, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" ></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>

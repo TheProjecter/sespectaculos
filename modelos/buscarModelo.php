@@ -58,7 +58,7 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 
-$maxRows_Listado = 80;
+$maxRows_Listado = 15;
 $pageNum_Listado = 0;
 if (isset($_GET['pageNum_Listado'])) {
   $pageNum_Listado = $_GET['pageNum_Listado'];
@@ -72,7 +72,7 @@ $Listado= mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 $row_Listado = mysql_fetch_assoc($Listado);
 
 //Para avanzar y retroceder, flechas
-if (!empty($query_Listado3)) { 
+if (!empty($query_Listado)) { 
     if (isset($_GET['totalRows_Listado'])) {
 	  $totalRows_Listado = $_GET['totalRows_Listado'];
 	} else {
@@ -86,8 +86,8 @@ if (!empty($query_Listado3)) {
 	  $params = explode("&", $_SERVER['QUERY_STRING']);
 	  $newParams = array();
 	  foreach ($params as $param) {
-	    if (stristr($param, "pageNum_Listado2") == false && 
-	        stristr($param, "totalRows_Listado2") == false) {
+	    if (stristr($param, "pageNum_Listado") == false && 
+	        stristr($param, "totalRows_Listado") == false) {
 	      array_push($newParams, $param);
 	    }
 	  }
