@@ -1,24 +1,20 @@
 <?php session_start()?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <title>Sistema Reventa Entradas Teatro</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="./votos/css/rating.css" />
-<script type="text/javascript" language="javascript" src="./vistas/programas.js"></script>
-<script type="text/javascript" language="javascript" src="./votos/js/behavior.js"></script>
-<script type="text/javascript" language="javascript" src="./votos/js/rating.js"></script>
+<script type="text/javascript"  src="./vistas/programas.js"></script>
+<script type="text/javascript"  src="./votos/js/behavior.js"></script>
+<script type="text/javascript"  src="./votos/js/rating.js"></script>
 
 </head>
 <body>
 <div id="header">
-	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
-	</div>
 	<div id="menu">
 		<ul>
 			<li><a href="#" accesskey="1" title="Inicio">Inicio</a></li>
@@ -31,24 +27,24 @@
 </div>
 
 <div id="login">
-<div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
-    <table align="center" width="68%">
+<div  id="tabla2" style="display:none;">  
+  	<form action="index.php?controlador=ingresar&Accion=usuarios"; method="post">
+    <table align="center" width="65%">
 	<tr>
-		<td class="imgTituloTabla">
+		<td align="center" class="imgTituloTabla">
 			<div class="tituloTabla">Panel Control</div>
 		</td>
 	</tr>
 	</table>
 	<?php if (!isset($_SESSION['usuario'])) {?>
-	<table align="center" width="25%" class="bordeTablaGris">
+	<table align="center"  width="65%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -65,8 +61,8 @@
     	?>
     	</td>
     	</tr> 
-    	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
-        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
+    	<tr><td><a class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
+        <tr><td><a class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
    </table>   
@@ -74,13 +70,13 @@
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" title="Portada" alt="100" width="500" height="120" style="margin-left: 15%;"  /></div>
 <div><br></br></div>
 <div id="content">
 	<div id="colOne">
 		<h2 class="section">Bienvenidos a nuestro portal Web</h2>
 		<div class="content">
-		<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=2 scrollDelay=9 direction=up>
+		<marquee onmouseover=this.stop() onmouseout=this.start() scrollAmount="2" scrollDelay="9" direction="up">
 		<div class="content">
 			<?php 
   				if($row_Listado==0 || $row_Listado== null){  
@@ -100,7 +96,7 @@
 		<div class="boxed">		
 			<h2 class="section">Ultimos Comentarios</h2>
 			<div class="content">
-			<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=2 scrollDelay=9 direction=up>
+			<marquee onmouseover=this.stop() onmouseout=this.start() scrollAmount="2" scrollDelay="9" direction="up">
   <div class="content">
 			<?php
   do { 
@@ -110,9 +106,9 @@
 		</div>
 		</marquee>
 		<br></br>
-		<form method="post" name="form1" enctype="multipart/form-data" action="index.php?controlador=comentario">
-			<p>Nick : <input type="text" name="nick" size=25 maxlength=25></input>
-			Comentario: <input type="text" name="comentarios" size=80 maxlength=250></input>
+		<form method="post"  name="form1" enctype="multipart/form-data" action="index.php?controlador=comentario">
+			<p>Nick : <input type="text" name="nick" title="comentarios" size="25"></input>
+			Comentario: <input type="text" name="comentarios" title="comentarios" size="80"></input>
           <input type="submit" class="boton" value="Enviar Comentario"></input></p>
           <p><input type="hidden" name="MM_insert" value="form1"></input></p>
 		</form>
@@ -122,18 +118,18 @@
 	<div id="colTwo">
 		<h2 class="section">Espectaculos mas solicitados</h2>
 		<div class="content">
-		<MARQUEE onmouseover=this.stop() onmouseout=this.start() scrollAmount=2 scrollDelay=9 direction=up>
+		<marquee onmouseover=this.stop() onmouseout=this.start() scrollAmount="2" scrollDelay="9" direction="up">
 		<div class="content">
 		
 			<?php if($row_Listado2==0 || $row_Listado2== null){?>
 			  <div style="float:center; text-align:center;">
-    		  <a id="titulos"> No hay ningun espectaculo solicitado</a><br />
+    		  <a name="Informacion"> No hay ningun espectaculo solicitado</a><br />
     		  </div>
   			<?php  }else{  do {?>
 			<div style="float:center; text-align:center;">
-    		<a id="titulos"><?php echo $row_Listado2['Evento']?></a><br />
-    		<a id="titulos"><?php echo $row_Listado2['Fecha']?></a><br />
-    		<a id="titulos"><?php echo $row_Listado2['Precio']."€"?></a><br />
+    		<a name="Evento"><?php echo $row_Listado2['Evento']?></a><br />
+    		<a name="Fecha"><?php echo $row_Listado2['Fecha']?></a><br />
+    		<a name="Precio"><?php echo $row_Listado2['Precio']." Euros"?></a><br />
     		<hr /><br />
     		</div>
    			<?php }  while ($row_Listado2 = mysql_fetch_assoc($Listado2)); } 

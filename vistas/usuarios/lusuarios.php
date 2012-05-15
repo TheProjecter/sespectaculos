@@ -1,6 +1,6 @@
 <?php session_start();?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <title>Sistema Reventa Entradas Teatro</title>
@@ -106,7 +106,7 @@ if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniacepta
       <td><?php echo $row_Listado1['Apellidos']; ?></td>
       <td><?php echo $row_Listado1['Usuario']; ?></td>
       <td><?php echo $row_Listado1['Evento']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&opcion=cuestionario&cod=<?php echo $row_Listado1['Dni']?>&cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" align="absmiddle" alt="MODIFICAR"/></a></td>  
+      <td><a href="index.php?controlador=opcionesUsuario&opcion=cuestionario&cod=<?php echo $row_Listado1['Dni']?>&cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" alt="MODIFICAR"/></a></td>  
     </tr>
   <?php  }}while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
