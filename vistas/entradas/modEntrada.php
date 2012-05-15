@@ -17,8 +17,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -45,11 +43,11 @@ function volver(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuarios" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -74,7 +72,7 @@ function volver(){
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>" onSubmit="return valida(this);">
 	
@@ -88,7 +86,7 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
-      <td><select name="tipos" onchange="elijo_espectaculo()">
+      <td><select title="Tipo Espectaculos" name="tipos" onchange="elijo_espectaculo()">
       <option value="<?php echo $row_MODIFICAR['tipoEspectaculo'] ?>"><?php echo $row_MODIFICAR['tipoEspectaculo'] ?></option>
      <?php  
 		echo '';
@@ -98,23 +96,23 @@ function volver(){
     	</select></td>
     </tr>
     <tr valign="baseline">
-      <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select name=Genero> 
+      <td align="right" class="letraLogin">Tipo:</td>
+     	<td><select title="Genero" name=Genero> 
 			<option value="<?php echo $row_MODIFICAR['Genero']; ?>"><?php echo $row_MODIFICAR['Genero']; ?></option>
 		</select>  </td>
  
     </tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Nombre del Evento:</td>
-      <td><input type="text" name="Evento" value="<?php echo $row_MODIFICAR['Evento']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Evento" type="text" name="Evento" value="<?php echo $row_MODIFICAR['Evento']; ?>" size="32" class="inputTexto"></input></td>
     </tr>	
      <tr valign="baseline">
       <td align="right" class="letraLogin">Lugar:</td>
-      <td><input type="text" name="Lugar" value="<?php echo $row_MODIFICAR['Lugar']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Lugar" type="text" name="Lugar" value="<?php echo $row_MODIFICAR['Lugar']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Provincia:</td>
-       <?php  echo '<td><select name="Provincia">';  
+       <?php  echo '<td><select title="Provincia" name="Provincia">';  
       		  echo ' <option value="'.$row_MODIFICAR['Provincia'].'">'.$row_MODIFICAR['Provincia'].'</option>'; 	 
   			  while ($row_Listado1=mysql_fetch_array($Listado1)){ 
     		  echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>';} 
@@ -123,33 +121,33 @@ function volver(){
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Fecha:</td>
-      <td><input type="text" name="Fecha" value="<?php echo $row_MODIFICAR['Fecha']; ?>" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img src="./vistas/img/week_f2.png" onClick="popUpCalendar(this, form2.dateArrival, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
+      <td><input title="Fecha" type="text" name="Fecha" value="<?php echo $row_MODIFICAR['Fecha']; ?>" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img alt="Calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form2.dateArrival, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Precio:</td>
-      <td><input type="text" name="Precio" value="<?php echo $row_MODIFICAR['Precio']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Precio" type="text" name="Precio" value="<?php echo $row_MODIFICAR['Precio']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td align="right" class="letraLogin">Fila:</td>
-      <td><input type="text" name="Fila" value="<?php echo $row_MODIFICAR['Fila']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Fila" type="text" name="Fila" value="<?php echo $row_MODIFICAR['Fila']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Asiento:</td>
-      <td><input type="text" name="Asiento" value="<?php echo $row_MODIFICAR['Asiento']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Asiento" type="text" name="Asiento" value="<?php echo $row_MODIFICAR['Asiento']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Descripcion:</td>
     </tr>
     <tr valign="baseline">
      <td align="right" class="letraLogin"></td>
-      <td><textarea name="Descripcion" cols="24" rows="5" class="inputTexto"><?php echo $row_MODIFICAR['Descripcion']; ?></textarea></td>
+      <td><textarea title="Descripcion" name="Descripcion" cols="24" rows="5" class="inputTexto"><?php echo $row_MODIFICAR['Descripcion']; ?></textarea></td>
     </tr>
     
    </table>    
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Modificar" type="submit" value="Modificar" class="inputTexto"></input></td>
     </tr>
   	</table>
 	<div><input type="hidden" name="MM_update" value="form1"></input></div>

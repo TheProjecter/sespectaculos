@@ -17,8 +17,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -45,11 +43,11 @@ function volver(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -89,7 +87,7 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
-      <td><select name="tipos" onchange="elijo_espectaculo()">
+      <td><select title="Tipo Espectaculo" name="tipos" onchange="elijo_espectaculo()">
      <?php  
 		echo '';  
 		echo ' <option value="">-</option>';	  
@@ -101,23 +99,23 @@ function volver(){
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select name=genero> 
+     	<td><select title="Genero" name=genero> 
 			<option value="-">- </option>
 		</select>  </td>
  
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Nombre del Evento:</td>
-      <td><input type="text" name="evento"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Nombre Evento" type="text" name="evento"  value="" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Lugar:</td>
-      <td><input type="text" name="lugar" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Lugar" type="text" name="lugar" value="" size="32" class="inputTexto"></input></td>
       </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
      <?php  
-			echo '<td><select name="provincia">';  
+			echo '<td><select title="Provincia" name="provincia">';  
 			echo ' <option value=""></option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
@@ -128,32 +126,32 @@ echo ' </select><td>';
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fecha:</td>
-      <td><input type="text" name="fecha" value="" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img src="./vistas/img/week_f2.png" onClick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
+      <td><input title="Fecha" type="text" name="fecha" value="" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img alt="Calendario" src="./vistas/img/week_f2.png" onClick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Precio:</td>
-      <td><input type="text" name="precio" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Precio" type="text" name="precio" value="" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fila:</td>
-      <td><input type="text" name="fila" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Fila" type="text" name="fila" value="" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Asiento:</td>
-      <td><input type="text" name="asiento" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Asiento" type="text" name="asiento" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Descripcion:</td>
      </tr>
      <tr valign="baseline">
      <td  align="right" class="letraLogin"></td>
-      <td><textarea name="descripcion" cols="24" rows="5" class="inputTexto">Descripcion del Evento</textarea></td>
+      <td><textarea title="Descripcion" name="descripcion" cols="24" rows="5" class="inputTexto">Descripcion del Evento</textarea></td>
     </tr>
    </table>    
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Enviar" type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
      <input type="hidden" name="MM_insert" value="form1"></input>

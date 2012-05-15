@@ -11,8 +11,6 @@
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -25,7 +23,7 @@
 </div>
 
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculo.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 
 <table  width="100%" style="margin-left: 5%;" >
@@ -53,7 +51,7 @@
 		<div style="float: left;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=solicitudes">
-					<img src="./vistas/images/header/icon-48-article.png" alt="Gestor de Ofertas"title="Gestor de Ofertas" ></img>					
+					<img src="./vistas/images/header/icon-48-article.png" alt="Mis Solicitudes" title="Mis Solicitudes" ></img>					
 					<br></br><span >Mis Solicitudes</span></a>
 			</div>
 		</div>
@@ -61,21 +59,21 @@
 				<div style="float: left;margin-left: 10%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=entradas">
-					<img src="./vistas/images/header/icon-48-media.png" alt="Gestor Demanda" title="Gestor de Demanda">		</img>			
+					<img src="./vistas/images/header/icon-48-media.png" alt="Mis Entradas" title="Mis Entradas"></img>			
 					<br></br><span>Mis Entradas</span></a>
 			</div>
 		</div>
 		<div style="float: left;margin-left: 10%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=modificar&dni=<?php echo $row_Listado['Dni']; ?>">
-					<img src="./vistas/images/header/icon-48-user.png" alt="Gestor de usuarios" title="Gestor de Usuarios">		</img>			
+					<img src="./vistas/images/header/icon-48-user.png" alt="Modificar Perfil" title="Modificar Perfil">		</img>			
 					<br></br><span>Modificar mi Perfil</span></a>
 			</div>
 		</div>
 		<div style="float: left;margin-left: 10%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=busqueda" >
-					<img src="./vistas/images/header/icon-48-category.png" alt="Gestor de Categorias" title="Gestor de Categorias"></img>					
+					<img src="./vistas/images/header/icon-48-category.png" alt="Busqueda de Entradas" title="Busqueda de Entradas"></img>					
 					<br></br><span>Busqueda de Entradas</span></a>
 
 			</div>			
@@ -87,7 +85,7 @@
 			<div style="float: left;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=insertarEntrada" >
-					<img src="./vistas/images/header/icon-48-category.png" alt="Gestor de Categorias" title="Gestor de Categorias"></img>					
+					<img src="./vistas/images/header/icon-48-category.png" alt="Insertar Entradas" title="Insertar Entradas"></img>					
 					<br></br><span>Insertar Entradas</span></a>
 
 			</div>		
@@ -102,7 +100,7 @@
 			<div style="float: left;margin-left: 12%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesUsuario&opcion=svaloracion">
-					<img src="./vistas/img/comments.png" alt="Comentarios" title="Comentarios" height="50"></img>			
+					<img src="./vistas/img/comments.png" alt="Sistema Valoracion" title="Sistema Valoracion" height="50"></img>			
 					<br></br><span>Sistema Valoracion</span></a>
 			</div>
 			</div>

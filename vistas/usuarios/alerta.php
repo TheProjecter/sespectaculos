@@ -20,8 +20,6 @@ function confirmar ( mensaje ) {
 <body>
 <div id="header">
 <div id="logo">
-<h1><a href="#"></a></h1>
-<h2><a href=""> </a></h2>
 </div>
 <div id="menu">
 <ul>
@@ -50,11 +48,11 @@ function confirmar ( mensaje ) {
 <table align="center" width="25%" class="bordeTablaGris">
         <tr valign="baseline">
                 <td align="right" class="letraLogin">Usuario:</td>
-                <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+                <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
         </tr>
         <tr valign="baseline">
                 <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-                <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+                <td><input title="contraseña"  type="password" name="pass" size=28 maxlength=20></input></td>
         </tr>
 </table>
 <h1 class="letraLogin" style="text-align: center; color: white;">Si no
@@ -89,13 +87,12 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
 </form>
 </div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500"
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="Sespectaculos" width="500"
         height="120" style="margin-left: 15%;" /></div>
 <br></br>
         <?php
         if (empty($row_Listado) ) {
-                //echo " 1 ".$_POST['evento']." 2 ".$_POST['lugar']." 3 ".$_POST['fecha']." 4 ".$query_Listado3;
-                echo "</br><h3 style='text-align: center;'>No hay resultados para la busqueda o no ha realizado ninguna busqueda </h3>";
+               echo "</br><h3 style='text-align: center;'>No hay resultados para la busqueda o no ha realizado ninguna busqueda </h3>";
         }else {?>
 <table border="0" align="center" width="100%">
 
@@ -142,29 +139,29 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
                 <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img
-                        src="./vistas/img/First.gif" border=0></img></a> <?php } // Show if not first page ?>
+                        src="./vistas/img/First.gif" border=0 alt="Principio"></img></a> <?php } // Show if not first page ?>
                 </td>
                 <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img
-                        src="./vistas/img/Previous.gif" border=0></img></a> <?php } // Show if not first page ?>
+                        src="./vistas/img/Previous.gif" border=0 alt="Anterior"></img></a> <?php } // Show if not first page ?>
                 </td>
                 <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img
-                        src="./vistas/img/Next.gif" border=0></img></a> <?php } // Show if not last page ?>
+                        src="./vistas/img/Next.gif" border=0 alt="Siguiente"></img></a> <?php } // Show if not last page ?>
                 </td>
                 <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img
-                        src="./vistas/img/Last.gif" border=0></img></a> <?php } // Show if not last page ?>
+                        src="./vistas/img/Last.gif" border=0 alt="Ultimo"></img></a> <?php } // Show if not last page ?>
                 </td>
         </tr>
 </table>
         <?php }?>
 <br></br>
 <br></br>
-<div><a href="index.php?controlador=usuarios"><img alt="100" height="60"
+<div><a href="index.php?controlador=usuarios"><img alt="volver" height="60"
         style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 <div><br></br><br></br></div>
 <div id="footer">

@@ -21,8 +21,6 @@ function confirmar ( mensaje ) {
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -34,7 +32,7 @@ function confirmar ( mensaje ) {
 	</div>
 </div>
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 <form method="post" name="form1" enctype="multipart/form-data"  action="index.php?controlador=opcionesAdministrador&opcion=cargar">
 	
@@ -49,11 +47,11 @@ function confirmar ( mensaje ) {
 <table align="center" width="100%" class="bordeTablaGris">
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Nombre Espectaculo:</td>
-      <td><input type="text" name="espectaculo" value="" size="50" class="inputTexto"></input></td>
+      <td><input title="Nombre Espectaculos" type="text" name="espectaculo" value="" size="50" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
-      <td><select name="tipos" onchange="elijo_espectaculo()">
+      <td><select title="Tipo Espectaculos" name="tipos" onchange="elijo_espectaculo()">
      <?php  
 		echo '';  
 		echo ' <option value="">-</option>';	  
@@ -65,7 +63,7 @@ function confirmar ( mensaje ) {
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select name=genero> 
+     	<td><select title="Genero" name=genero> 
 			<option value="-">- </option>
 		</select>  </td>
  
@@ -73,7 +71,7 @@ function confirmar ( mensaje ) {
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
      <?php  
-			echo '<td><select name="provincia">';  
+			echo '<td><select title="Provincia" name="provincia">';  
 			echo ' <option value=""></option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
@@ -84,32 +82,32 @@ echo ' </select><td>';
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Lugar:</td>
-      <td><input type="text" name="lugar" value="" size="50" class="inputTexto"></input></td>
+      <td><input title="Lugar" type="text" name="lugar" value="" size="50" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fecha:</td>
-      <td><input type="text" name="fecha" value="" size="20" class="inputTexto" id="dateArrival" readonly="readonly"><img src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /> </input></td>
+      <td><input title="Fecha" type="text" name="fecha" value="" size="20" class="inputTexto" id="dateArrival" readonly="readonly"><img alt="Calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /> </input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Precio:</td>
-      <td><input type="text" name="precio" value="" size="10" class="inputTexto"></input></td>
+      <td><input title="Precio" type="text" name="precio" value="" size="10" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Cartel del Espectaculo:</td>
-      <td><input name="ufile[]" type="file" id="ufile[]" size="50" />  </td>
+      <td><input title="Cargar Cartel" name="ufile[]" type="file" id="ufile[]" size="50" />  </td>
     </tr>
 </table>
  <table align="center">
   <tr valign="baseline">
       <td>&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Registrar" type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
 </div>
 <div><input type="hidden" name="MM_insert" value="form1"></input></div>
 </form>
 
-<div><a href="index.php?controlador=administrador"><img alt="100" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=administrador"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 
 <div><br></br><br></br><br></br></div>
 <div id="footer">

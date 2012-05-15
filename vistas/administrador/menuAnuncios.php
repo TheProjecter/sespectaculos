@@ -12,8 +12,6 @@
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -25,7 +23,7 @@
 	</div>
 </div>
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br><br></br></div>
 		<div  style="float:left; margin-left:30%">
 				<a href="index.php?controlador=opcionesAdministrador&opcion=lanuncios" >
@@ -42,7 +40,7 @@
 			
 
 <div><br></br><br></br><br></br></div>
-<div><a href="index.php?controlador=administrador"><img alt="100" height="60" style="margin-left:20%" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=administrador"><img alt="volver" height="60" style="margin-left:20%" src="./vistas/images/return.png"></img></a></div>
 
 
 <div><br></br><br></br><br></br></div>
