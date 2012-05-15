@@ -37,11 +37,11 @@
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuarios" type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuarios" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="login/registro.php"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -50,8 +50,9 @@
       <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <tr><td>
+    <table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -61,7 +62,7 @@
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="salir.php">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
+   </table>   </td></tr>
   	</table>
       </form>
   	</div>

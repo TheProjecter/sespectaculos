@@ -8,12 +8,11 @@
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function confirmar ( mensaje ) {
 	return confirm( mensaje );
 	}
 </script>
-
 </head>
 <body>
 <div id="header">
@@ -28,10 +27,8 @@ function confirmar ( mensaje ) {
 		</ul>
 	</div>
 </div>
-
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
-<div><br></br></div>
-    
+<div><br></br></div>    
  <table border="0" align="center" width="100%">
    <tr class="letraCabeceraListado">
     <td>Tipo De Categoria</td>
@@ -43,8 +40,8 @@ function confirmar ( mensaje ) {
    	 ?>
     <tr class="colorFila" align="center">       
       <td><?php echo $row_Listado['NombreEspectaculo']; ?></td>
-       <td><a href="modificarTipoEspectaculo.php?ID=<?php echo $row_Listado['idTipo']; ?>"><img src="./vistas/img/edit_f2.png" title="Modificar" alt="MODIFICAR"/></a></td> 
-      <td><a href="index.php?controlador=opcionesAdministrador&opcion=borrar&eliminar=categorias&cod=<?php echo $row_Listado['idTipo']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR"  alt="ELIMINAR"/></a></td>     
+      <td><a href="modificarTipoEspectaculo.php?ID=<?php echo $row_Listado['idTipo']; ?>"><img src="./vistas/img/edit_f2.png" title="Modificar" alt="MODIFICAR"/></a></td> 
+      <td><a href="index.php?controlador=opcionesAdministrador&amp;opcion=borrar&amp;eliminar=categorias&amp;cod=<?php echo $row_Listado['idTipo']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td>     
     </tr>
    <?php }  while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
@@ -82,8 +79,8 @@ function confirmar ( mensaje ) {
      </table>    
     <table align="center">
  		<tr valign="baseline">
-      <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Registrar" class="inputTexto"></input></td>
+      <td>&nbsp;</td>
+     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
     <div><input type="hidden" name="MM_insert" value="form1"></input></div>

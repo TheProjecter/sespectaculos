@@ -9,7 +9,7 @@
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function confirmar ( mensaje ) {
 	return confirm( mensaje );
 	}
@@ -45,11 +45,11 @@ function confirmar ( mensaje ) {
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -59,6 +59,7 @@ function confirmar ( mensaje ) {
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     <?php }else{?>
+    <tr><td>
     <table align="center" width="35%">
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
@@ -69,7 +70,7 @@ function confirmar ( mensaje ) {
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
+   </table> </td></tr>  
   	</table>
       </form>
   	</div>

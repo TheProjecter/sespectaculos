@@ -8,7 +8,7 @@
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function volver(){
 	parent.location.href='index.php?controlador=usuarios';
 }
@@ -49,11 +49,11 @@ function comprar(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -62,8 +62,9 @@ function comprar(){
       <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <tr><td>
+    <table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -73,7 +74,7 @@ function comprar(){
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
+   </table> </td></tr>  
   	</table>
       </form>
   	</div>
@@ -82,31 +83,31 @@ function comprar(){
 <br></br>
 <div id="colOneI">
 		<h2  class="section">Datos Contacto Vendedor</h2>
-		<div id="contentI" style="margin-top: 0.5em;">			
-   			 <div id="div"> <a class="letraLogin" id="a">Nombre: </a>			<a id="b"><?php echo $row_Listado['Nombre']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Apellidos: </a> 		<a id="b"><?php echo $row_Listado['Apellidos']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Dni: </a>				<a id="b"><?php echo $row_Listado['Dni']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Edad: </a>			    <a id="b"><?php echo $row_Listado['Edad']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Telefono: </a> 		<a id="b"><?php echo $row_Listado['Telefono']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Email: </a> 			<a id="b"><?php echo $row_Listado['Email']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Direccion: </a> 		<a id="b"><?php echo $row_Listado['Direccion']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Localidad: </a> 		<a id="b"><?php echo $row_Listado['Localidad']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Provincia: </a> 		<a id="b"><?php echo $row_Listado['Provincia']; ?></a></div>
-</div>
+		<div id="contentI" style="margin-top: 0.8em;">			
+   			 <div> <a class="as">Nombre: </a>			<a class="bs"><?php echo $row_Listado['Nombre']; ?></a></div>
+    		 <div> <a class="as">Apellidos: </a> 		<a class="bs"><?php echo $row_Listado['Apellidos']; ?></a></div>
+   			 <div> <a class="as">Dni: </a>				<a class="bs"><?php echo $row_Listado['Dni']; ?></a></div>
+    		 <div> <a class="as">Edad: </a>			    <a class="bs"><?php echo $row_Listado['Edad']; ?></a></div>
+   			 <div> <a class="as">Telefono: </a> 		<a class="bs"><?php echo $row_Listado['Telefono']; ?></a></div>
+   			 <div> <a class="as">Email: </a> 			<a class="bs"><?php echo $row_Listado['Email']; ?></a></div>
+   			 <div> <a class="as">Direccion: </a> 		<a class="bs"><?php echo $row_Listado['Direccion']; ?></a></div>
+   			 <div> <a class="as">Localidad: </a> 		<a class="bs"><?php echo $row_Listado['Localidad']; ?></a></div>
+   			 <div> <a class="as">Provincia: </a> 		<a class="bs"><?php echo $row_Listado['Provincia']; ?></a></div>
+	</div>
 		</div>
 		
 <div id="colTwoI">
 		<h2  class="section">Datos Entradas</h2>
-		<div id="contentI" style="margin-top: 0.5em;">			
-   			 <div id="div"> <a class="letraLogin" id="a">Evento: </a>			<a id="b"><?php echo $row_Listado2['Evento']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Provincia: </a> 		<a id="b"><?php echo $row_Listado2['Provincia']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Lugar: </a>			<a id="b"><?php echo $row_Listado2['Lugar']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Fecha: </a>			<a id="b"><?php echo $row_Listado2['Fecha']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Precio: </a> 		    <a id="b"><?php echo $row_Listado2['Precio']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Fila: </a> 			<a id="b"><?php echo $row_Listado2['Fila']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Asiento: </a> 		    <a id="b"><?php echo $row_Listado2['Asiento']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Genero:</a> 		    <a id="b"><?php echo $row_Listado2['Genero']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Descripcion: </a> 		<a id="b"><?php echo $row_Listado2['Descripcion']; ?></a></div>
+		<div id="contentI" style="margin-top: 0.8em;">			
+   			 <div> <a class="as">Evento: </a>			<a class="bs"><?php echo $row_Listado2['Evento']; ?></a></div>
+    		 <div> <a class="as">Provincia: </a> 		<a class="bs"><?php echo $row_Listado2['Provincia']; ?></a></div>
+   			 <div> <a class="as">Lugar: </a>			<a class="bs"><?php echo $row_Listado2['Lugar']; ?></a></div>
+    		 <div> <a class="as">Fecha: </a>			<a class="bs"><?php echo $row_Listado2['Fecha']; ?></a></div>
+   			 <div> <a class="as">Precio: </a> 		    <a class="bs"><?php echo $row_Listado2['Precio']; ?></a></div>
+   			 <div> <a class="as">Fila: </a> 			<a class="bs"><?php echo $row_Listado2['Fila']; ?></a></div>
+   			 <div> <a class="as">Asiento: </a> 		    <a class="bs"><?php echo $row_Listado2['Asiento']; ?></a></div>
+   			 <div> <a class="as">Genero:</a> 		    <a class="bs"><?php echo $row_Listado2['Genero']; ?></a></div>
+   			 <div> <a class="as">Descripcion: </a> 		<a class="bs"><?php echo $row_Listado2['Descripcion']; ?></a></div>
 </div>
 </div>	
 

@@ -8,7 +8,7 @@
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function confirmar ( mensaje ) {
 	return confirm( mensaje );
 	}
@@ -50,11 +50,11 @@ function aceptar(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -63,8 +63,9 @@ function aceptar(){
       <td>&nbsp;</td>
      <td><input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <tr><td>
+    <table align="center" width="35%">
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -74,7 +75,7 @@ function aceptar(){
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
+   </table> </td></tr>  
   	</table>
       </form>
   	</div>
@@ -85,16 +86,16 @@ function aceptar(){
 <div id="colTot">
 		<h2  class="section">Datos Usuario</h2>
 		<div id="contentI" style="margin-top: 0.5em;">			
-   			 <div id="div"> <a class="letraLogin" id="a">Nombre: </a>			<a id="b"><?php echo $row_Listado['Nombre']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Apellidos: </a> 		<a id="b"><?php echo $row_Listado['Apellidos']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Edad: </a>				<a id="b"><?php echo $row_Listado['Edad']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Direccion: </a>		<a id="b"><?php echo $row_Listado['Direccion']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Localidad: </a> 		<a id="b"><?php echo $row_Listado['Localidad']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Provincia: </a> 		<a id="b"><?php echo $row_Listado['Provincia']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Cod. Postal: </a> 		<a id="b"><?php echo $row_Listado['Cp']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Telefono: </a> 		<a id="b"><?php echo $row_Listado['Telefono']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Email:</a> 		    <a id="b"><?php echo $row_Listado['Email']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Puntuacion:</a> 		<a id="b"><?php echo $row_Listado['puntuacion']; ?></a></div>
+   			 <div class="datos"> <a class="as">Nombre: </a>		<a class="bs"><?php echo $row_Listado['Nombre']; ?></a></div>
+    		 <div class="datos"> <a class="as">Apellidos: </a> 	<a class="bs"><?php echo $row_Listado['Apellidos']; ?></a></div>
+   			 <div class="datos"> <a class="as">Edad: </a>		<a class="bs"><?php echo $row_Listado['Edad']; ?></a></div>
+    		 <div class="datos"> <a class="as">Direccion: </a>	<a class="bs"><?php echo $row_Listado['Direccion']; ?></a></div>
+   			 <div class="datos"> <a class="as">Localidad: </a> 	<a class="bs"><?php echo $row_Listado['Localidad']; ?></a></div>
+   			 <div class="datos"> <a class="as">Provincia: </a> 	<a class="bs"><?php echo $row_Listado['Provincia']; ?></a></div>
+   			 <div class="datos"> <a class="as">Cod. Postal: </a> <a class="bs"><?php echo $row_Listado['Cp']; ?></a></div>
+   			 <div class="datos"> <a class="as">Telefono: </a> 	<a class="bs"><?php echo $row_Listado['Telefono']; ?></a></div>
+   			 <div class="datos"> <a class="as">Email:</a> 		<a class="bs"><?php echo $row_Listado['Email']; ?></a></div>
+   			 <div class="datos"> <a class="as">Puntuacion:</a> 	<a class="bs"><?php echo $row_Listado['puntuacion']; ?></a></div>
    		</div>
    		
 </div>

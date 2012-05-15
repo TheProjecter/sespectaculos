@@ -30,16 +30,16 @@
 <tr>
 <td rowspan="2" colspan= ><h2  class="section">Datos Usuarios</h2>
 		<div id="contentI" style="margin-top: 0.5em;">			
-   			 <div id="div"> <a class="letraLogin" id="a">Nombre: </a>			<a id="b"><?php echo $row_Listado['Nombre']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Apellidos: </a> 		<a id="b"><?php echo $row_Listado['Apellidos']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Dni: </a>				<a id="b"><?php echo $row_Listado['Dni']; ?></a></div>
-    		 <div id="div"> <a class="letraLogin" id="a">Edad: </a>			    <a id="b"><?php echo $row_Listado['Edad']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Telefono: </a> 		<a id="b"><?php echo $row_Listado['Telefono']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Email: </a> 			<a id="b"><?php echo $row_Listado['Email']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Direccion: </a> 		<a id="b"><?php echo $row_Listado['Direccion']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Localidad: </a> 		<a id="b"><?php echo $row_Listado['Localidad']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Provincia: </a> 		<a id="b"><?php echo $row_Listado['Provincia']; ?></a></div>
-   			 <div id="div"> <a class="letraLogin" id="a">Valoracion: </a> 		<a id="b"><?php echo $puntuacion; ?></a></div>
+   			 <div id="div"> <a class="as">Nombre: </a>			<a class="bs"><?php echo $row_Listado['Nombre']; ?></a></div>
+    		 <div id="div"> <a class="as">Apellidos: </a> 		<a class="bs"><?php echo $row_Listado['Apellidos']; ?></a></div>
+   			 <div id="div"> <a class="as">Dni: </a>				<a class="bs"><?php echo $row_Listado['Dni']; ?></a></div>
+    		 <div id="div"> <a class="as">Edad: </a>			<a class="bs"><?php echo $row_Listado['Edad']; ?></a></div>
+   			 <div id="div"> <a class="as">Telefono: </a> 		<a class="bs"><?php echo $row_Listado['Telefono']; ?></a></div>
+   			 <div id="div"> <a class="as">Email: </a> 			<a class="bs"><?php echo $row_Listado['Email']; ?></a></div>
+   			 <div id="div"> <a class="as">Direccion: </a> 		<a class="bs"><?php echo $row_Listado['Direccion']; ?></a></div>
+   			 <div id="div"> <a class="as">Localidad: </a> 		<a class="bs"><?php echo $row_Listado['Localidad']; ?></a></div>
+   			 <div id="div"> <a class="as">Provincia: </a> 		<a class="bs"><?php echo $row_Listado['Provincia']; ?></a></div>
+   			 <div id="div"> <a class="as">Valoracion: </a> 		<a class="bs"><?php echo $puntuacion; ?></a></div>
 </div>
 </td>
 
