@@ -13,8 +13,6 @@
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menuPag">
 		<ul>
@@ -25,7 +23,7 @@
 		</ul>
 	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 <?php if(isset($_SESSION['usuarioAdm'])){
 ?>
@@ -42,16 +40,16 @@
 
 <form method="post" name="form1" enctype="multipart/form-data" action=index.php?controlador=ingresar&Accion=admnistrador>
 <dl>
-<dt><label>Usuario:</label></dt>
-<dd><input name="user" type="text" id="users" size="40" ></input></dd>
+<dt>Usuario:</dt>
+<dd><input title="usuario" name="user" type="text" id="users" size="40" ></input></dd>
 </dl>
 
 <dl>
-<dt><label>Contraseña:</label></dt>
-<dd><input name="pass" type="password" id="pass" size="40"></input></dd>
+<dt>Contraseña:</dt>
+<dd><input title="contraseña" name="pass" type="password" id="pass" size="40"></input></dd>
 </dl>
 
-<div><input type="submit" value="Entrar" size=""></input></div>
+<div><input title="entrar" type="submit" value="Entrar" size=""></input></div>
 <div><input type="hidden" name="MM_insert" value="form1"> </input></div>	
 </form>
 		

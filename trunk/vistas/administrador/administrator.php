@@ -12,8 +12,6 @@
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -26,7 +24,7 @@
 </div>
 
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 
 <table  width="100%" style="margin-left: 5%;" >
@@ -47,7 +45,7 @@
 		<div style="float: left; margin-top: 5%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesAdministrador&opcion=solicitudes">
-					<img src="./vistas/images/header/icon-48-article.png" alt="Gestor de Ofertas"title="Gestor de Ofertas" ></img>					
+					<img src="./vistas/images/header/icon-48-article.png" alt="Gestor de Solicitudes" title="Gestor de Solicitudes" ></img>					
 					<br></br><span >Gestor de Solicitudes</span></a>
 			</div>
 		</div>
@@ -55,7 +53,7 @@
 				<div style="float: left;margin-left: 10%; margin-top: 5%;">
 			<div class="icon">
 				<a href="index.php?controlador=opcionesAdministrador&opcion=entradas">
-					<img src="./vistas/images/header/icon-48-media.png" alt="Gestor Demanda" title="Gestor de Demanda">		</img>			
+					<img src="./vistas/images/header/icon-48-media.png" alt="Gestor de Entradas" title="Gestor de Entradas">		</img>			
 					<br></br><span>Gestor Entradas</span></a>
 			</div>
 		</div>

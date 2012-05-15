@@ -17,8 +17,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -30,7 +28,7 @@ function volver(){
 	</div>
 </div>
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>"  onsubmit="return valida(this);">
@@ -45,12 +43,12 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Espectaculo:</td>
-      <td><input type="text" name="nombre" value="<?php echo $row_MODIFICAR['NombreEspectaculo']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Espectaculos" type="text" name="nombre" value="<?php echo $row_MODIFICAR['NombreEspectaculo']; ?>" size="32" class="inputTexto"></input></td>
     </tr>	
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
      <?php  
-			echo '<td><select name="provincia">';  
+			echo '<td><select title="Provincia" name="provincia">';  
 			echo ' <option value="'.$row_MODIFICAR["Provincia"].'">'.$row_MODIFICAR["Provincia"].'</option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
@@ -61,7 +59,7 @@ echo ' </select><td>';
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
-      <td><select name="tipos" onchange="elijo_espectaculo()">
+      <td><select title="Tipo Espectaculo" name="tipos" onchange="elijo_espectaculo()">
      <?php  
 		echo '';  
 		echo ' <option value="'.$row_MODIFICAR["Tipo"].'">'.$row_MODIFICAR["Tipo"].'</option>';	  
@@ -73,32 +71,32 @@ echo ' </select><td>';
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select name=genero> 
+     	<td><select title="Genero" name=genero> 
 			<option value="<?php echo $row_MODIFICAR["Genero"]?>"><?php echo $row_MODIFICAR["Genero"]?> </option>
 		</select>  </td>
  
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Lugar:</td>
-      <td><input type="text" name="lugar" value="<?php echo $row_MODIFICAR['Lugar']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Lugar" type="text" name="lugar" value="<?php echo $row_MODIFICAR['Lugar']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td align="right" class="letraLogin">Precio:</td>
-      <td><input type="text" name="precio" value="<?php echo $row_MODIFICAR['Precio']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Precio" type="text" name="precio" value="<?php echo $row_MODIFICAR['Precio']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Fecha:</td>
-      <td><input type="text" name="fecha" value="<?php echo $row_MODIFICAR['Fecha']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Fecha" type="text" name="fecha" value="<?php echo $row_MODIFICAR['Fecha']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Cartel Espectaculo:</td>
-      <td><input type="text" name="cartel" value="<?php echo $row_MODIFICAR['Ruta']; ?>" size="32" class="inputTexto"></input><input name="ufile[]" type="file" id="ufile[]" size="50" />  </td>
+      <td><input title="Cartel" type="text" name="cartel" value="<?php echo $row_MODIFICAR['Ruta']; ?>" size="32" class="inputTexto"></input><input title="Cargar" name="ufile[]" type="file" id="ufile[]" size="50" />  </td>
     </tr>
    </table>    
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Registrar" type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
 	<div><input type="hidden" name="MM_update" value="form1"></input></div>

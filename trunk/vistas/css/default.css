@@ -185,7 +185,6 @@ a:hover {
 #colTre {
 	margin-top:2em;
 	font-size: 15px;
-	font:sans-serif 
 	float: right;
 	width: 90%;
 	background: url(../images/img05.gif) repeat-x;
@@ -193,7 +192,6 @@ a:hover {
 #colfor {
 	margin-top:2em;
 	font-size: 14px;
-	font:sans-serif 
 	float: right;
 	width: 90%;
 	background: url(../images/img05.gif) repeat-x;
@@ -203,7 +201,6 @@ a:hover {
 	margin-left:40%;
 	margin-top:1%;
 	margin-bottom:2%;
-	float: center;
 	width:30%;
 	text-align:center;	
 	background: url(../images/img05.gif) repeat-x;

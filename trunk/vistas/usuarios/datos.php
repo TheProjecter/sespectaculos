@@ -24,8 +24,6 @@ function aceptar(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -52,11 +50,11 @@ function aceptar(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -81,7 +79,7 @@ function aceptar(){
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <br></br>	
 
 <div id="colTot">
@@ -101,11 +99,11 @@ function aceptar(){
    		
 </div>
 <div id="contentII">
-<input type="button" title="Rechazar compra" value="Rechazar Oferta" onclick="rechazar()" style="margin-top: 50px;" />
-<input type="button" title="Aceptar Compra" value="Aceptar Oferta" onclick="aceptar()" style="margin-top: 50px;" />
+<input type="button" alt="Rechazar Compra" title="Rechazar Compra" value="Rechazar Oferta" onclick="rechazar()" style="margin-top: 50px;" />
+<input type="button" alt="Aceptar Compra" title="Aceptar Compra" value="Aceptar Oferta" onclick="aceptar()" style="margin-top: 50px;" />
 </div>
 <div><br></br></div>
-<div><a href="index.php?controlador=usuarios"><img alt="100" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=usuarios"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 
 <div><br></br><br></br></div>
 

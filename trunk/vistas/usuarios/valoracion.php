@@ -17,8 +17,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -45,11 +43,11 @@ function volver(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -74,7 +72,7 @@ function volver(){
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculo.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>">
 	
@@ -89,24 +87,24 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Nombre:</td>
-      <td><input readonly="readonly" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Nombre" readonly="readonly" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="32" class="inputTexto"></input></td>
     </tr>	
      <tr valign="baseline">
       <td align="right" class="letraLogin">Apellidos:</td>
-      <td><input readonly="readonly" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Apellidos" readonly="readonly" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">NIF:</td>
-      <td><input readonly="readonly" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Dni" readonly="readonly" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Email:</td>
-      <td><input readonly="readonly" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Email" readonly="readonly" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="32" class="inputTexto"></input></td>
     </tr>
     <tr><td></td></tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Valoracion:</td>
-      <td><select name="valoracion">
+      <td><select title="Valoracion" name="valoracion">
       	<option value="0">0</option>
       	<option value="1">1</option>
       	<option value="2">2</option>
@@ -124,14 +122,14 @@ function volver(){
      </tr>
      <tr valign="baseline">
      <td  align="right" class="letraLogin"></td>
-      <td><textarea name="comentario" cols="30" rows="6" class="inputTexto"></textarea></td>
+      <td><textarea title="Comentario" name="comentario" cols="30" rows="6" class="inputTexto"></textarea></td>
     </tr>
    </table>  
      
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Registrar" type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
      <div><input type="hidden" name="MM_insert" value="form1"></input></div>

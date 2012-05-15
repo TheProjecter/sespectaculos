@@ -18,8 +18,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -45,18 +43,18 @@ function volver(){
 	<?php if (!isset($_SESSION['usuario'])) {?>
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td align="right" class="letraLogin">Usuario:</td>
+      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td><input title="contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
-      <td nowrap align="">&nbsp;</td>
+      <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     <?php }else{
@@ -67,7 +65,7 @@ function volver(){
     	</td>
     	</tr> 
     	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
-        <td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td>
+        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
    </table>   
@@ -75,7 +73,7 @@ function volver(){
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br><br></br></div>
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>">
 	
@@ -89,17 +87,17 @@ function volver(){
 	
 	<table align="center" width="100%" class="bordeTablaGris">
     <tr valign="baseline">
-      <td  align="right" class="letraLogin">Nombre del Evento:</td>
-      <td><input type="text" name="evento"  value="" size="32" class="inputTexto"></input></td>
+      <td align="right" class="letraLogin">Nombre del Evento:</td>
+      <td><input type="text" name="evento" title="Nombre Evento" value="" size="32" class="inputTexto"></input></td>
     </tr>
     
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Lugar:</td>
-      <td><input type="text" name="lugar" value="" size="32" class="inputTexto"></input></td>
+      <td><input type="text" name="lugar" value="" title="Lugar" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
-     <?php  echo '<td><select name="provincia">'; 
+     <?php  echo '<td><select title="Provincia" name="provincia">'; 
       echo ' <option value=""></option>';
  	  while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      	echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
@@ -107,12 +105,12 @@ function volver(){
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fecha: Entre</td>
-      <td><input type="text" name="fecha1" value="" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img src="./vistas/img/week_f2.png" onClick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input>
-      <a>&nbsp&nbsp&nbsp  </a><input type="text" name="fecha2" value="" size="10" class="inputTexto" id="dateArriva2" readonly="readonly">&nbsp;<img src="./vistas/img/week_f2.png" onClick="popUpCalendar(this, form1.dateArriva2, 'yyyy/mm/dd');" align="absmiddle" width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
+      <td><input title="Fecha Entre" type="text" name="fecha1" value="" size="10" class="inputTexto" id="dateArrival" readonly="readonly">&nbsp;<img alt="calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input>
+      <input title="y" type="text" name="fecha2" value="" size="10" class="inputTexto" id="dateArriva2" readonly="readonly">&nbsp;<img alt="Calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArriva2, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></input></td>
       </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
-      <td><select name="tipos" onchange="elijo_espectaculo()">
+      <td><select title="Tipo Espectaculo" name="tipos" onchange="elijo_espectaculo()">
      <?php  
 		 
 		echo ' <option value=" "></option>';	  
@@ -124,7 +122,7 @@ function volver(){
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select name=genero> 
+     	<td><select title="Genero" name=genero> 
 			<option value=" "> </option>
 		</select>  </td>
  
@@ -133,7 +131,7 @@ function volver(){
    <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Buscar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="buscar" type="submit" value="Buscar" class="inputTexto"></input></td>
     </tr>
   	</table>
      <input type="hidden" name="MM_insert" value="form1"></input>
@@ -188,19 +186,19 @@ if ($row_Listado3['idEntrada'] != null || $row_Listado3['idEntrada'] != ""){
   <table border="0" width="50%" align="center">
   <tr>
     <td width="23%" align="center"><?php if ($pageNum_Listado3 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" alt="Principio"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="31%" align="center"><?php if ($pageNum_Listado3 > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, max(0, $pageNum_Listado3 - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, max(0, $pageNum_Listado3 - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" alt="Anterior"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado3 < $totalPages_Listado2) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, min($totalPages_Listado2, $pageNum_Listado3 + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, min($totalPages_Listado2, $pageNum_Listado3 + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" alt="Siguiente"></img></a>
           <?php } // Show if not last page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado3 < $totalPages_Listado2) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, $totalPages_Listado2, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></a>
+          <a href="<?php printf("%s?pageNum_Listado3=%d%s", $currentPage, $totalPages_Listado2, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" alt="Ultima"></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>

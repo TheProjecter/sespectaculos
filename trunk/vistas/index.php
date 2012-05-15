@@ -27,7 +27,7 @@
 </div>
 
 <div id="login">
-<div  id="tabla2" style="display:none;">  
+<div  id="tabla2" style="display: none;">  
   	<form action="index.php?controlador=ingresar&Accion=usuarios"; method="post">
     <table align="center" width="65%">
 	<tr>
@@ -40,11 +40,11 @@
 	<table align="center"  width="65%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size="28"></input></td>
+      <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size="28"></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -152,6 +152,21 @@
 <div><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <strong>Melli</strong></p>
+</div>
+<div align="right">
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>
+     
 </div>
 </body>
 </html>

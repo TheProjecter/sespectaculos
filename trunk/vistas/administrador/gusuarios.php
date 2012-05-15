@@ -21,8 +21,6 @@ function confirmar ( mensaje ) {
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -34,7 +32,7 @@ function confirmar ( mensaje ) {
 	</div>
 </div>
 
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
     
  <table border="0" align="center" width="100%">
@@ -67,19 +65,19 @@ function confirmar ( mensaje ) {
   <table border="0" width="50%" align="center">
   <tr>
     <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" border=0></img></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img src="./vistas/img/First.gif" alt="Primera"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" border=0></img></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img src="./vistas/img/Previous.gif" alt="Anterior"></img></a>
           <?php } // Show if not first page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" border=0></img></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img src="./vistas/img/Next.gif" alt="Siguiente"></img></a>
           <?php } // Show if not last page ?>
     </td>
     <td width="23%" align="center"><?php if ($pageNum_Listado +1 < $totalPages_Listado) { // Show if not last page ?>
-          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" border=0></img></a>
+          <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" alt="Ultima"></img></a>
           <?php } // Show if not last page ?>
     </td>
   </tr>
@@ -87,7 +85,7 @@ function confirmar ( mensaje ) {
 </table>
 <?php if($totalRows_Listado==0 || $totalRows_Listado== null){?><div><br></br><a style="margin-left: 45%;font-size: medium;"><?php  echo "No hay resultados disponibles";} ?> </a></div>
 <div><br></br><br></br></div>
-<div><a href="index.php?controlador=administrador"><img alt="100" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=administrador"><img alt="volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 
 <div><br></br><br></br><br></br></div>
 <div id="footer">

@@ -16,8 +16,6 @@ function volver(){
 <body>
 <div id="header">
 	<div id="logo">
-		<h1><a href="#"></a></h1>
-		<h2><a href=""> </a></h2>
 	</div>
 	<div id="menu">
 		<ul>
@@ -44,11 +42,11 @@ function volver(){
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
@@ -73,7 +71,7 @@ function volver(){
       </form>
   	</div>
 </div>
-<div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
+<div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
 
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>" onsubmit="return valida(this);">
@@ -89,69 +87,68 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Usuario:</td>
-      <td><input type="text" name="usuario"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Usuario" type="text" name="usuario"  value="" size="32" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input type="password"" name="contrasenha" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Contraseña" type="password"" name="contrasenha" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Repetir Contrase&ntilde;a:</td>
-      <td><input type="password" name="pass"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Repetir Contraseña" type="password" name="pass"  value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">E-mail:</td>
-      <td><input type="text" name="email" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Email" type="text" name="email" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Nombre:</td>
-      <td><input type="text" name="nombre" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Nombre" type="text" name="nombre" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Apellidos:</td>
-      <td><input type="text" name="apellidos"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Apellidos" type="text" name="apellidos"  value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Edad:</td>
-      <td><input type="text" name="edad"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Edad" type="text" name="edad"  value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Dni:</td>
-      <td><input type="text" name="dni" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Dni" type="text" name="dni" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Telefono:</td>
-      <td><input type="text" name="telefono" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Telefono" type="text" name="telefono" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Direccion:</td>
-      <td><input type="text" name="direccion" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Direccion" type="text" name="direccion" value="" size="32" class="inputTexto"></input></td>
     </tr>
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
      <?php  
-	 echo '<td><select name="provincia">';  
+	 echo '<td><select title="Provincia" name="provincia">';  
 	 echo ' <option value=""></option>';	 
   	 while ($row_Listado=mysql_fetch_array($Listado)){ 
      echo ' <option value="'.$row_Listado["Provincia"].'">'.$row_Listado["Provincia"].'</option>'; 
-     } 
-  
+     }   
 	 echo ' </select><td>';  
 	 ?>
     </tr>  
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Localidad:</td>
-      <td><input type="text" name="localidad" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Localidad" type="text" name="localidad" value="" size="32" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Cod. Postal:</td>
-      <td><input type="text" name="cp" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Codigo Postal" type="text" name="cp" value="" size="32" class="inputTexto"></input></td>
     </tr>
    </table>    
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input type="submit" value="Registrar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Registrar" type="submit" value="Registrar" class="inputTexto"></input></td>
     </tr>
   	</table>
     <div> <input type="hidden" name="MM_insert" value="form1"></input></div>
