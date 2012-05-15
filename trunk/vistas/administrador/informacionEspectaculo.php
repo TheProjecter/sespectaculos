@@ -21,29 +21,23 @@
 		</ul>
 	</div>
 </div>
-
-
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
-<div><br></br></div>
-    
+<div><br></br></div>    
 <div id= "informacion">
-	<img src="<?php echo  $row_Listado['Ruta']?>" alt="Gestor de usuarios" title="Gestor de Usuarios" width="450" height="350"></img><br /><br />		
+	<img src= " <?php echo $row_Listado['Ruta'];?> " alt="Gestor de usuarios" title="Gestor de Usuarios" width="450" height="350" /><br /><br />		
 	<h3 id="ficha">Ficha Tecnica </h3><br />
-    <a id="titulos">Nombre del Espectaculo: </a><a>    <?php echo $row_Listado['NombreEspectaculo']?></a><br></br>
-    <a id="titulos">Tipo: </a><a>  <?php  echo $row_Listado['Tipo']?></a><br></br>
-    <a id="titulos">Lugar: </a><a>  <?php echo  $row_Listado['Lugar']?></a><br></br>
-    <a id="titulos">Fecha: </a><a>  <?php echo $row_Listado['Fecha']?></a><br></br>
-    <a id="titulos"> Precio: </a><a>  <?php echo $row_Listado['Precio']?></a><br></br>
-    <a id="titulos">Fecha:  </a><a>	  <?php echo  $row_Listado['Fecha']?></a><br></br>	
-</div>
-  
+    <a class="titulos">Nombre del Espectaculo: </a><a><?php echo $row_Listado['NombreEspectaculo'];?></a><br></br>
+    <a class="titulos">Tipo: </a>   <a><?php  echo $row_Listado['Tipo'];?></a><br></br>
+    <a class="titulos">Lugar: </a>  <a><?php echo  $row_Listado['Lugar'];?></a><br></br>
+    <a class="titulos">Fecha: </a>  <a><?php echo $row_Listado['Fecha'];?></a><br></br>
+    <a class="titulos"> Precio: </a><a><?php echo $row_Listado['Precio'];?></a><br></br>
+    <a class="titulos">Fecha:  </a> <a><?php echo  $row_Listado['Fecha'];?></a><br></br>	
+</div>  
 <div><br></br><br></br></div>
 <div><a href="index.php"><img alt="volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 <div><br></br><br></br><br></br></div>	
-		
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <strong>Melli</strong></p>
 </div>
-
 </body>
 </html>   

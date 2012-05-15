@@ -1,4 +1,4 @@
-<?session_start();?> 
+<?php session_start();?> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
@@ -10,13 +10,11 @@
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
 <script language="javascript" src="./vistas/popcalendar.js" type="text/javascript"></script>
-
-<script>
+<script type="text/javascript">
 function confirmar ( mensaje ) {
 	return confirm( mensaje );
 	}
 </script>
-
 </head>
 <body>
 <div id="header">
@@ -31,11 +29,9 @@ function confirmar ( mensaje ) {
 		</ul>
 	</div>
 </div>
-
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
-<form method="post" name="form1" enctype="multipart/form-data"  action="index.php?controlador=opcionesAdministrador&opcion=cargar">
-	
+<form method="post" name="form1" enctype="multipart/form-data"  action="index.php?controlador=opcionesAdministrador&amp;opcion=cargar">
 <div id="tabla1">   <!-- Primera Tabla -->
 	<table align="center" width="100%">
 	<tr>
@@ -55,18 +51,16 @@ function confirmar ( mensaje ) {
      <?php  
 		echo '';  
 		echo ' <option value="">-</option>';	  
-  		while ($row_Listado4=mysql_fetch_array($Listado4)) 
-    	{ 
+  		while ($row_Listado4=mysql_fetch_array($Listado4)){ 
      		echo ' <option value="'.$row_Listado4["NombreEspectaculo"].'">'.$row_Listado4["NombreEspectaculo"].'</option>'; 
     	} ?>
     	</select></td>
     </tr>
     <tr valign="baseline">
-      <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select title="Genero" name=genero> 
-			<option value="-">- </option>
-		</select>  </td>
- 
+      <td align="right" class="letraLogin">Tipo:</td>
+     	<td><select title="Genero" name="genero"> 
+			<option value="-">-</option>
+		</select></td> 
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
@@ -75,10 +69,9 @@ function confirmar ( mensaje ) {
 			echo ' <option value=""></option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
-    } 
-  
-echo ' </select><td>';  
-?>
+    }   
+	echo ' </select><td>';  
+	?>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Lugar:</td>
@@ -86,7 +79,7 @@ echo ' </select><td>';
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fecha:</td>
-      <td><input title="Fecha" type="text" name="fecha" value="" size="20" class="inputTexto" id="dateArrival" readonly="readonly"><img alt="Calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /> </input></td>
+      <td><input title="Fecha" type="text" name="fecha" value="" size="20" class="inputTexto" id="dateArrival" readonly="readonly" /><img alt="Calendario" src="./vistas/img/week_f2.png" onclick="popUpCalendar(this, form1.dateArrival, 'yyyy/mm/dd');"  width="24px" height="24px" title="Abrir calendario" style="cursor:pointer;" /></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Precio:</td>
@@ -106,9 +99,7 @@ echo ' </select><td>';
 </div>
 <div><input type="hidden" name="MM_insert" value="form1"></input></div>
 </form>
-
 <div><a href="index.php?controlador=administrador"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
-
 <div><br></br><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>

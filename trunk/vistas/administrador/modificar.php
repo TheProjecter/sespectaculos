@@ -7,11 +7,10 @@
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function volver(){
-	parent.location.href='index.php?controlador=opcionesAdministrador&opcion=lanuncios';
+	parent.location.href='index.php?controlador=opcionesAdministrador&amp;opcion=lanuncios';
 }
-
 </script>
 </head>
 <body>
@@ -27,12 +26,9 @@ function volver(){
 		</ul>
 	</div>
 </div>
-
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <div><br></br></div>
-
-<form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>"  onsubmit="return valida(this);">
-	
+<form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction;?>" onsubmit="return valida(this);">
 	<table align="center" width="100%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -43,7 +39,7 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Espectaculo:</td>
-      <td><input title="Espectaculos" type="text" name="nombre" value="<?php echo $row_MODIFICAR['NombreEspectaculo']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Espectaculos" type="text" name="nombre" value="<?php echo $row_MODIFICAR['NombreEspectaculo'];?>" size="32" class="inputTexto"></input></td>
     </tr>	
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
@@ -52,8 +48,7 @@ function volver(){
 			echo ' <option value="'.$row_MODIFICAR["Provincia"].'">'.$row_MODIFICAR["Provincia"].'</option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
-    } 
-  
+    }   
 echo ' </select><td>';  
 ?>
     </tr>
@@ -62,20 +57,18 @@ echo ' </select><td>';
       <td><select title="Tipo Espectaculo" name="tipos" onchange="elijo_espectaculo()">
      <?php  
 		echo '';  
-		echo ' <option value="'.$row_MODIFICAR["Tipo"].'">'.$row_MODIFICAR["Tipo"].'</option>';	  
-  		while ($row_Listado4=mysql_fetch_array($Listado4)) 
-    	{ 
+		echo '<option value="'.$row_MODIFICAR["Tipo"].'">'.$row_MODIFICAR["Tipo"].'</option>';	  
+  		while ($row_Listado4=mysql_fetch_array($Listado4)){ 
      		echo ' <option value="'.$row_Listado4["NombreEspectaculo"].'">'.$row_Listado4["NombreEspectaculo"].'</option>'; 
     	} ?>
     	</select></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo:</td>
-     	<td><select title="Genero" name=genero> 
-			<option value="<?php echo $row_MODIFICAR["Genero"]?>"><?php echo $row_MODIFICAR["Genero"]?> </option>
-		</select>  </td>
- 
-    </tr>
+     	<td><select title="Genero" name="genero"> 
+			<option value="<?php echo $row_MODIFICAR['Genero'];?>"><?php echo $row_MODIFICAR['Genero'];?></option>
+		</select></td>
+     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Lugar:</td>
       <td><input title="Lugar" type="text" name="lugar" value="<?php echo $row_MODIFICAR['Lugar']; ?>" size="32" class="inputTexto"></input></td>
@@ -100,9 +93,9 @@ echo ' </select><td>';
     </tr>
   	</table>
 	<div><input type="hidden" name="MM_update" value="form1"></input></div>
-    <div><input type="hidden" name="id" value="<?php echo $row_MODIFICAR['idInformacion']; ?>"></input></div>
+    <div><input type="hidden" name="id" value="<?php echo $row_MODIFICAR['idInformacion'];?>"></input></div>
 </form>
-	<div style="clear: both;">&nbsp;</div>
+	<div style="clear:both;">&nbsp;</div>
 <div><br></br><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>

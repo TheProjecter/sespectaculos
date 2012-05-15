@@ -15,5 +15,21 @@
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <strong>Melli</strong></p>
 </div>
+<div align="right">
+<p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="25" width="70" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>
+</div>
 </body>
 </html>

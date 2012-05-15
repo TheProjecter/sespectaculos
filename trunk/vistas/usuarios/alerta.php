@@ -11,7 +11,7 @@
         type="text/javascript"></script>
 <script language="javascript" src="./vistas/popcalendar.js"
         type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function confirmar ( mensaje ) {
         return confirm( mensaje );
         }
@@ -48,11 +48,11 @@ function confirmar ( mensaje ) {
 <table align="center" width="25%" class="bordeTablaGris">
         <tr valign="baseline">
                 <td align="right" class="letraLogin">Usuario:</td>
-                <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
+                <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
         </tr>
         <tr valign="baseline">
                 <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-                <td><input title="contraseña"  type="password" name="pass" size=28 maxlength=20></input></td>
+                <td><input title="contraseña"  type="password" name="pass" size="28"></input></td>
         </tr>
 </table>
 <h1 class="letraLogin" style="text-align: center; color: white;">Si no
@@ -136,25 +136,25 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
 </table>
 <table border="0" width="50%" align="center">
         <tr>
-                <td width="23%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+                <td width="23%" align="center"><? if ($pageNum_Listado > 0) { // Show if not first page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, 0, $queryString_Listado); ?>"><img
-                        src="./vistas/img/First.gif" border=0 alt="Principio"></img></a> <?php } // Show if not first page ?>
+                        src="./vistas/img/First.gif" alt="Principio"></img></a> <?php } // Show if not first page ?>
                 </td>
-                <td width="31%" align="center"><?php if ($pageNum_Listado > 0) { // Show if not first page ?>
+                <td width="31%" align="center"> <? if ($pageNum_Listado > 0) { // Show if not first page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, max(0, $pageNum_Listado - 1), $queryString_Listado); ?>"><img
-                        src="./vistas/img/Previous.gif" border=0 alt="Anterior"></img></a> <?php } // Show if not first page ?>
+                        src="./vistas/img/Previous.gif" alt="Anterior"></img></a> <?php } // Show if not first page ?>
                 </td>
-                <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
+                <td width="23%" align="center"> <? if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, min($totalPages_Listado, $pageNum_Listado + 1), $queryString_Listado); ?>"><img
-                        src="./vistas/img/Next.gif" border=0 alt="Siguiente"></img></a> <?php } // Show if not last page ?>
+                        src="./vistas/img/Next.gif" alt="Siguiente"></img></a> <?php } // Show if not last page ?>
                 </td>
-                <td width="23%" align="center"><?php if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
+                <td width="23%" align="center"> <? if ($pageNum_Listado < $totalPages_Listado) { // Show if not last page ?>
                 <a
                         href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img
-                        src="./vistas/img/Last.gif" border=0 alt="Ultimo"></img></a> <?php } // Show if not last page ?>
+                        src="./vistas/img/Last.gif" alt="Ultimo"></img></a> <?php } // Show if not last page ?>
                 </td>
         </tr>
 </table>
