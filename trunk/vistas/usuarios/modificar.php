@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <title>Sistema Reventa Entradas Teatro</title>
@@ -44,18 +44,18 @@ function volver(){
 	<?php if (!isset($_SESSION['usuario'])) {?>
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Usuario:</td>
+      <td align="right" class="letraLogin">Usuario:</td>
       <td><input type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
       <td><input type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
-      <td nowrap align="">&nbsp;</td>
+      <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     <?php }else{
@@ -66,7 +66,7 @@ function volver(){
     	</td>
     	</tr> 
     	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
-        <td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td>
+        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
    </table>   
@@ -77,7 +77,7 @@ function volver(){
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="" width="500" height="120" style="margin-left: 15%;" /></div>
 <br></br>
 
-<form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>" onSubmit="return valida(this);">
+<form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>" onsubmit="return valida(this);">
 	
 	<table align="center" width="100%">
 	<tr>

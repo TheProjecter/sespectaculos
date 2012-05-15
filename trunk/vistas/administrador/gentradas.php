@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <title>Sistema Reventa Entradas Teatro</title>
@@ -58,7 +58,7 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado['Lugar']; ?></td>
       <td><?php echo $row_Listado['Fecha']; ?></td>
 	  <td><?php echo $row_Listado['Estado']; ?></td>
-      <td><a href="index.php?controlador=opcionesAdministrador&opcion=borrar&eliminar=entradas&cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" border="0" align="absmiddle" alt="ELIMINAR"/></a></td>     
+      <td><a href="index.php?controlador=opcionesAdministrador&opcion=borrar&eliminar=entradas&cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" border="0"  alt="ELIMINAR"/></a></td>     
     </tr>
    <?php }  while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>

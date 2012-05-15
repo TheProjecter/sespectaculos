@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <title>Sistema Reventa Entradas Teatro</title>
@@ -40,18 +40,18 @@
 	<?php if (!isset($_SESSION['usuario'])) {?>
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Usuario:</td>
+      <td align="right" class="letraLogin">Usuario:</td>
       <td><input type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
       <td><input type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
-      <td nowrap align="">&nbsp;</td>
+      <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     <?php }else{
@@ -81,7 +81,7 @@
       <td style="text-decoration: blink"  align="center" class="letraLogin"></td>
       </tr>
      <tr align="center" valign="baseline">
-     <td><input type="image"  align="center" src="./vistas/img/error.jpg" height="150" width="160" value="" class="inputTexto"></input></td>
+     <td><input type="image" src="./vistas/img/error.jpg" class="inputTexto"></input></td>
      </tr>
 </table> 
 

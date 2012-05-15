@@ -1,13 +1,14 @@
 <?php session_start();
 header('refresh:2; url=index.php?controlador=opcionesUsuario&opcion=entradas'); 
 ?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
 <head>
-<meta http-equiv="content-type"  content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <title>Sistema Reventa Entradas Teatro</title>
 <meta name="keywords" content=""  />
 <meta name="description" content="" />
+<meta content="refresh" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
@@ -42,29 +43,29 @@ header('refresh:2; url=index.php?controlador=opcionesUsuario&opcion=entradas');
 	<?php if (!isset($_SESSION['usuario'])) {?>
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Usuario:</td>
+      <td align="right" class="letraLogin">Usuario:</td>
       <td><input type="text" name="nick" size=28 maxlength=20></input></td>
     </tr>
     <tr valign="baseline">
-      <td nowrap align="right" class="letraLogin">Contrase&ntilde;a:</td>
+      <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
       <td><input type="password" name="pass" size=28 maxlength=20></input></td>
     </tr>     
   </table>
   <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
-      <td nowrap align="">&nbsp;</td>
-     <td> <input type="submit" class="boton" value="Ingresar"></input></td>
+      <td>&nbsp;</td>
+     <td><input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
     	</td>
     	</tr> 
     	<tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=usuarios">Mi Zona</a></td></tr>     
-        <td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td>
+        <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
    </table>   
@@ -76,14 +77,14 @@ header('refresh:2; url=index.php?controlador=opcionesUsuario&opcion=entradas');
 <br></br>
 <table align="center" width="100%" class="bordeTablaGris">
      <tr valign="baseline">
-      <td style="text-decoration: blink;font-size: large;" nowrap align="center" class="letraLogin">Ya has aceptado una oferta por esta entrada</td>
+      <td style="text-decoration: blink;font-size: large;" align="center" class="letraLogin">Ya has aceptado una oferta por esta entrada</td>
       </tr>
       <tr><td></td></tr> <tr><td></td></tr> <tr><td></td></tr>
      <tr valign="baseline">
-      <td style="text-decoration: blink" nowrap align="center" class="letraLogin">Cargando...</td>
+      <td style="text-decoration: blink" align="center" class="letraLogin">Cargando...</td>
       </tr>
      <tr align="center" valign="baseline">
-     <td><input type="image" nowrap align="center" src="./vistas/img/anim-loader.gif" height="40" width="160" value="" class="inputTexto"></input></td>
+     <td><input type="image" src="./vistas/img/anim-loader.gif" alt="10" class="inputTexto"></input></td>
      </tr>
 </table>
 
