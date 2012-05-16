@@ -32,7 +32,7 @@ function volver(){
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -51,7 +51,7 @@ function volver(){
       <td><input title="contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
@@ -167,7 +167,7 @@ if ($row_Listado3['idEntrada'] != null || $row_Listado3['idEntrada'] != ""){
   ?>
     <tr class="colorFila" align="center">
     
-      <td><a href="index.php?controlador=opcionesUsuario&opcion=vendedor&entrada=<?php echo $row_Listado3['codEntrada']?>"><img src="./vistas/img/edit_f2.png" title="oferta" alt="oferta"/></a></td>
+      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=vendedor&amp;entrada=<?php echo $row_Listado3['codEntrada']?>"><img src="./vistas/img/edit_f2.png" title="oferta" alt="oferta"/></a></td>
       <td><?php echo $row_Listado3['Evento']; ?></td>
       <td><?php echo $row_Listado3['Provincia']; ?></td>
       <td><?php echo $row_Listado3['Lugar']; ?></td>  

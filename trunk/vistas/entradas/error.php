@@ -24,10 +24,9 @@
 		</ul>
 	</div>
 </div>
-
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -39,21 +38,22 @@
 	<table align="center" width="25%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuario" type="text" name="nick" size=28 maxlength=20></input></td>
+      <td><input title="Usuario" type="text" name="nick" size="28"></input></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="pass" size=28 maxlength=20></input></td>
+      <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
      <td> <input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
-    <?php }else{
-    	?><table align="center" width="35%" >
+    <?php }else{?>
+    <tr><td>
+    <table align="center" width="35%" >
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -63,7 +63,7 @@
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
+   </table></td></tr>   
   	</table>
       </form>
   	</div>
@@ -82,10 +82,26 @@
      <td><input title="Error" alt="Error" type="image" src="./vistas/img/error.jpg" class="inputTexto"></input></td>
      </tr>
 </table> 
-
 <div><br></br><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>
 </div> 
+<div align="right">
+<p>
+ <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+  </a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>     
+</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
 <script language="javascript" src="./vistas/popcalendar.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function volver(){
 	parent.location.href='index.php?controlador=usuarios';
 }
@@ -31,7 +31,7 @@ function volver(){
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -50,7 +50,7 @@ function volver(){
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td >&nbsp;</td>
@@ -83,8 +83,7 @@ function volver(){
 			<div class="tituloTabla">Formulario para la insercion de una nueva entrada</div>
 		</td>
 	</tr>
-	</table>
-	
+	</table>	
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Tipo de Espectaculo:</td>
@@ -102,8 +101,7 @@ function volver(){
       <td  align="right" class="letraLogin">Tipo:</td>
      	<td><select title="Genero" name="genero"> 
 			<option value="-">- </option>
-		</select>  </td>
- 
+		</select></td> 
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Nombre del Evento:</td>
@@ -120,10 +118,9 @@ function volver(){
 			echo ' <option value=""></option>';	 
   	while ($row_Listado1=mysql_fetch_array($Listado1)){ 
      echo ' <option value="'.$row_Listado1["Provincia"].'">'.$row_Listado1["Provincia"].'</option>'; 
-    } 
-  
-echo ' </select><td>';  
-?>
+    }   
+	echo ' </select><td>';  
+	?>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Fecha:</td>
@@ -157,8 +154,6 @@ echo ' </select><td>';
   	</table>
      <input type="hidden" name="MM_insert" value="form1"></input>
 </form>
-
-
 <div style="clear: both;">&nbsp;</div>
 <div><br></br><br></br></div>
 <div id="footer">
