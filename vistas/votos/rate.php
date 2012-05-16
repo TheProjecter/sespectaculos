@@ -42,7 +42,7 @@ if (!empty($envoi)) {
          $nbr_votes +=1; 
          $moy_votes=((($stats[1]*$stats[2])+$note)/$nbr_votes); 
      } 
-else { echo "<font face=Verdana size=2 color=red>You have already voted</font>"; } 
+else { echo "<div align=center><font face=Verdana size=2 color=red>You have already voted</font> </div><br/>";} 
      $ip_vote=$ip; 
      $vote=fopen($ficdest, "w"); 
      $new_stats=fputs($vote, "$new_count|$nbr_votes|$moy_votes|$stats[3]|$ip_vote"); 
@@ -97,11 +97,13 @@ if ($stats[2]<=0)
 	$star = "/SEspectaculosMVC/vistas/votos/images/00star.gif" ;
 }	
 print ("<table bordercolor=#99999 cellspacing=0 border=0><td width=50% cellspacing=none cellpadding=none align=middle valign=middle border=1><font size=1 face=Verdana color=#999999>Rating: <img src=\"$star\" alt=\"Average rating: $stats[2]\">  $stats[1] Ratings</td><tr></font>");
-echo"<td align=middle valign=middle><input type=radio name=note value=5><font face=arial size=2 color=#99999>Excellent";
+
+echo"<td align=middle valign=middle><br><input type=radio name=note value=5><font face=arial size=2 color=#99999>Excellent";
 echo"<input type=radio name=note value=4>Very Good";
 echo"<input type=radio name=note value=3>Good";
 echo"<input type=radio name=note value=2>Fine";
 echo"<input type=radio name=note value=1>Bad";
-print ("<input type=hidden name=envoi value=1>  <input type=submit value=Rate style=background:#ffcc00;border-width:1;Border-color:#ffcc00;></table></form></font></td>");
+echo "<br>";
+print ("<input type=hidden name=envoi value=1><br />  <input type=submit value=Rate style=background:#ffcc00;border-width:1;Border-color:#ffcc00;></table></form></font></td>");
 
 ?>

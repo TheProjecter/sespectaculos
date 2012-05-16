@@ -3,30 +3,30 @@
 	var startAt = 1	;		// 0 - sunday ; 1 - monday
 	var showWeekNumber = 1;	// 0 - don't show; 1 - show
 	var showToday = 1;		// 0 - don't show; 1 - show
-	var imgDir = "../login/images/"	;		// directory for images ... e.g. var imgDir="/img/"
+	var imgDir = "vistas/images/"	;		// directory for images ... e.g. var imgDir="/img/"
 
 	var gotoString = "Go To Current Month";
 	var todayString = "Hoy es";
 	var weekString = "Sem";
 	var scrollLeftMessage = "Click to scroll to previous month. Hold mouse button to scroll automatically.";
-	var scrollRightMessage = "Click to scroll to next month. Hold mouse button to scroll automatically."
-	var selectMonthMessage = "Click to select a month."
-	var selectYearMessage = "Click to select a year."
-	var selectDateMessage = "Select [date] as date." // do not replace [date], it will be replaced by date.
+	var scrollRightMessage = "Click to scroll to next month. Hold mouse button to scroll automatically.";
+	var selectMonthMessage = "Click to select a month.";
+	var selectYearMessage = "Click to select a year.";
+	var selectDateMessage = "Select [date] as date." ;// do not replace [date], it will be replaced by date.
 
-	var	crossobj, crossMonthObj, crossYearObj, monthSelected, yearSelected, dateSelected, omonthSelected, oyearSelected, odateSelected, monthConstructed, yearConstructed, intervalID1, intervalID2, timeoutID1, timeoutID2, ctlToPlaceValue, ctlNow, dateFormat, nStartingYear
+	var	crossobj, crossMonthObj, crossYearObj, monthSelected, yearSelected, dateSelected, omonthSelected, oyearSelected, odateSelected, monthConstructed, yearConstructed, intervalID1, intervalID2, timeoutID1, timeoutID2, ctlToPlaceValue, ctlNow, dateFormat, nStartingYear;
 
-	var	bPageLoaded=false
-	var	ie=document.all
-	var	dom=document.getElementById
+	var	bPageLoaded=false;
+	var	ie=document.all;
+	var	dom=document.getElementById;
 
-	var	ns4=document.layers
-	var	today =	new	Date()
-	var	dateNow	 = today.getDate()
-	var	monthNow = today.getMonth()
-	var	yearNow	 = today.getYear()
-	var	imgsrc = new Array("drop1.gif","drop2.gif","left1.gif","left2.gif","right1.gif","right2.gif")
-	var	img	= new Array()
+	var	ns4=document.layers;
+	var	today =	new	Date();
+	var	dateNow	 = today.getDate();
+	var	monthNow = today.getMonth();
+	var	yearNow	 = today.getYear();
+	var	imgsrc = new Array("drop1.gif","drop2.gif","left1.gif","left2.gif","right1.gif","right2.gif");
+	var	img	= new Array();
 
 	var bShow = false;
 
@@ -93,90 +93,90 @@
 
 	function HolidayRec (d, m, y, desc)
 	{
-		this.d = d
-		this.m = m
-		this.y = y
-		this.desc = desc
+		this.d = d;
+		this.m = m;
+		this.y = y;
+		this.desc = desc;
 	}
 
-	var HolidaysCounter = 0
-	var Holidays = new Array()
+	var HolidaysCounter = 0;
+	var Holidays = new Array();
 
 	function addHoliday (d, m, y, desc)
 	{
-		Holidays[HolidaysCounter++] = new HolidayRec ( d, m, y, desc )
+		Holidays[HolidaysCounter++] = new HolidayRec ( d, m, y, desc );
 	}
 
 	if (dom)
 	{
 		for	(i=0;i<imgsrc.length;i++)
 		{
-			img[i] = new Image
-			img[i].src = imgDir + imgsrc[i]
+			img[i] = new Image;
+			img[i].src = imgDir + imgsrc[i];
 		}
-		document.write ("<div onclick='bShow=true' id='calendar'	style='z-index:+999;position:absolute;margin-left: 55%; margin-top: 18em;visibility:hidden;'><table	width="+((showWeekNumber==1)?250:220)+" style='font-family:arial;font-size:11px;border-width:1;border-style:solid;border-color:#a0a0a0;font-family:arial; font-size:11px}' bgcolor='#ffffff'><tr background='images/calback.jpg'><td background='images/calback.jpg'><table width='"+((showWeekNumber==1)?248:218)+"'><tr><td style='padding:2px;font-family:arial; font-size:11px;'><font color='#FFFFFF'><B><span id='caption'></span></B></font></td><td align=right><a href='javascript:hideCalendar()'><IMG SRC='"+imgDir+"close.gif' BORDER='0' ALT='Close the Calendar'></a></td></tr></table></td></tr><tr><td style='padding:5px' bgcolor=#ffffff><span id='content'></span></td></tr>")
+		document.write ("<div onclick='bShow=true' id='calendar' style='z-index:+999;position:absolute;margin-left: 57%; margin-top: 20em;visibility:hidden;'><table width="+((showWeekNumber==1)?250:220)+" style='font-family:arial;font-size:11px;border-width:1;border-style:solid;border-color:#a0a0a0;font-family:arial; font-size:11px}' bgcolor='#ffffff'><tr background='vistas/images/calback.jpg'><td background='vistas/images/calback.jpg'><table width='"+((showWeekNumber==1)?248:218)+"'><tr><td style='padding:2px;font-family:arial; font-size:11px;'><font color='#ffffff'><B><span id='caption'></span></B></font></td><td align=right><a href='javascript:hideCalendar()'><img src='"+imgDir+"close.gif' alt='Close the Calendar'></a></td></tr></table></td></tr><tr><td style='padding:5px' bgcolor=#ffffff><span id='content'></span></td></tr>");
 			
 		if (showToday==1)
 		{
-			document.write ("<tr bgcolor=#f0f0f0><td style='padding:5px' align=center><span id='lblToday'></span></td></tr>")
+			document.write ("<tr bgcolor=#f0f0f0><td style='padding:5px' align=center><span id='lblToday'></span></td></tr>");
 		}
 			
-		document.write ("</table></div><div id='selectMonth' style='z-index:+999;position:absolute;visibility:hidden;'></div><div id='selectYear' style='z-index:+999;position:absolute;visibility:hidden;'></div>");
+		document.write ("</table></div><div id='selectMonth' style='z-index: 999; position: absolute; margin-left: 60%; margin-top: 22em; visibility: hidden;'></div><div id='selectYear' style='z-index: 999; margin-left: 65%; position: absolute; margin-top: 22em; visibility: hidden;'></div>");
 	}
 
 //---------------------------------------------TRADUCCION EN ESPAÑOL-----------------------------------------------------------------------------
-	var	monthName =	new	Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Augosto","Septiembre","Octubre","Noviembre","Diciembre")
-	var	monthName2 = new Array("ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC")
+	var	monthName =	new	Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Augosto","Septiembre","Octubre","Noviembre","Diciembre");
+	var	monthName2 = new Array("ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC");
 	if (startAt==0)
 	{
-		dayName = new Array	("Lun","Mar","Mie","Jue","Vie","Sab","Dom")
+		dayName = new Array	("Lun","Mar","Mie","Jue","Vie","Sab","Dom");
 	}
 	else
 	{
-		dayName = new Array	("Lun","Mar","Mie","Jue","Vie","Sab","Dom")
+		dayName = new Array	("Lun","Mar","Mie","Jue","Vie","Sab","Dom");
 	}
-	var	styleAnchor="text-decoration:none;color:black;"
-	var	styleLightBorder="border-style:solid;border-width:1px;border-color:#a0a0a0;"
+	var	styleAnchor="text-decoration:none;color:";
+	var	styleLightBorder="border-style:solid;border-width:1px;border-color:#a0a0a0;";
 
 	function swapImage(srcImg, destImg){
-		if (ie)	{ document.getElementById(srcImg).setAttribute("src",imgDir + destImg) }
+		if (ie)	{ document.getElementById(srcImg).setAttribute("src",imgDir + destImg); }
 	}
 
 	function init()	{
 		if (!ns4)
 		{
-			if (!ie) { yearNow += 1900	}
+			if (!ie) { yearNow += 1900;	}
 
-			crossobj=(dom)?document.getElementById("calendar").style : ie? document.all.calendar : document.calendar
-			hideCalendar()
+			crossobj=(dom)?document.getElementById("calendar").style : ie? document.all.calendar : document.calendar;
+			hideCalendar();
 
-			crossMonthObj=(dom)?document.getElementById("selectMonth").style : ie? document.all.selectMonth	: document.selectMonth
+			crossMonthObj=(dom)?document.getElementById("selectMonth").style : ie? document.all.selectMonth	: document.selectMonth;
 
-			crossYearObj=(dom)?document.getElementById("selectYear").style : ie? document.all.selectYear : document.selectYear
+			crossYearObj=(dom)?document.getElementById("selectYear").style : ie? document.all.selectYear : document.selectYear;
 
 			monthConstructed=false;
 			yearConstructed=false;
 
 			if (showToday==1)
 			{
-				document.getElementById("lblToday").innerHTML =	todayString + " <a onmousemove='window.status=\""+gotoString+"\"' onmouseout='window.status=\"\"' title='"+gotoString+"' style='"+styleAnchor+"' href='javascript:monthSelected=monthNow;yearSelected=yearNow;constructCalendar();'>"+dayName[(today.getDay()-startAt==-1)?6:(today.getDay()-startAt)]+", " + dateNow + " " + monthName[monthNow].substring(0,15)	+ "	" +	yearNow	+ "</a>"
+				document.getElementById("lblToday").innerHTML =	todayString + " <a onmousemove='window.status=\""+gotoString+"\"' onmouseout='window.status=\"\"' title='"+gotoString+"' style='"+styleAnchor+"' href='javascript:monthSelected=monthNow;yearSelected=yearNow;constructCalendar();'>"+dayName[(today.getDay()-startAt==-1)?6:(today.getDay()-startAt)]+", " + dateNow + " " + monthName[monthNow].substring(0,15)	+ "	" +	yearNow	+ "</a>";
 			}
 
-			sHTML1="<span id='spanLeft'	style='border-style:solid;border-width:1;border-color:#ffffff;cursor:pointer' onmouseover='swapImage(\"changeLeft\",\"left2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+scrollLeftMessage+"\"' onclick='javascript:decMonth()' onmouseout='clearInterval(intervalID1);swapImage(\"changeLeft\",\"left1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onmousedown='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"StartDecMonth()\",500)'	onmouseup='clearTimeout(timeoutID1);clearInterval(intervalID1)'>&nbsp<IMG id='changeLeft' SRC='"+imgDir+"left1.gif' width=10 height=11 BORDER=0>&nbsp</span>&nbsp;"
-			sHTML1+="<span id='spanRight' style='border-style:solid;border-width:1;border-color:#ffffff;cursor:pointer'	onmouseover='swapImage(\"changeRight\",\"right2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+scrollRightMessage+"\"' onmouseout='clearInterval(intervalID1);swapImage(\"changeRight\",\"right1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onclick='incMonth()' onmousedown='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"StartIncMonth()\",500)'	onmouseup='clearTimeout(timeoutID1);clearInterval(intervalID1)'>&nbsp<IMG id='changeRight' SRC='"+imgDir+"right1.gif'	width=10 height=11 BORDER=0>&nbsp</span>&nbsp"
-			sHTML1+="<span id='spanMonth' style='border-style:solid;border-width:1;border-color:#ffffff;cursor:pointer'	onmouseover='swapImage(\"changeMonth\",\"drop2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+selectMonthMessage+"\"' onmouseout='swapImage(\"changeMonth\",\"drop1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onclick='popUpMonth()'></span>&nbsp;"
-			sHTML1+="<span id='spanYear' style='border-style:solid;border-width:1;border-color:#fffffff;cursor:pointer' onmouseover='swapImage(\"changeYear\",\"drop2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+selectYearMessage+"\"'	onmouseout='swapImage(\"changeYear\",\"drop1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"'	onclick='popUpYear()'></span>&nbsp;"
+			sHTML1="<span id='spanLeft'	style='border-style:solid;border-width:1;border-color:blue;cursor:pointer' onmouseover='swapImage(\"changeLeft\",\"left2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+scrollLeftMessage+"\"' onclick='javascript:decMonth()' onmouseout='clearInterval(intervalID1);swapImage(\"changeLeft\",\"left1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onmousedown='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"StartDecMonth()\",500)'	onmouseup='clearTimeout(timeoutID1);clearInterval(intervalID1)'>&nbsp<IMG id='changeLeft' SRC='"+imgDir+"left1.gif' width=10 height=11 BORDER=0>&nbsp</span>&nbsp;";
+			sHTML1+="<span id='spanRight' style='border-style:solid;border-width:1;border-color:#ffffff;cursor:pointer'	onmouseover='swapImage(\"changeRight\",\"right2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+scrollRightMessage+"\"' onmouseout='clearInterval(intervalID1);swapImage(\"changeRight\",\"right1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onclick='incMonth()' onmousedown='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"StartIncMonth()\",500)'	onmouseup='clearTimeout(timeoutID1);clearInterval(intervalID1)'>&nbsp<IMG id='changeRight' SRC='"+imgDir+"right1.gif'	width=10 height=11 BORDER=0>&nbsp</span>&nbsp";
+			sHTML1+="<span id='spanMonth' style='border-style:solid;border-width:1;border-color:#ffffff;cursor:pointer'	onmouseover='swapImage(\"changeMonth\",\"drop2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+selectMonthMessage+"\"' onmouseout='swapImage(\"changeMonth\",\"drop1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"' onclick='popUpMonth()'></span>&nbsp;";
+			sHTML1+="<span id='spanYear' style='border-style:solid;border-width:1;border-color:#fffffff;cursor:pointer' onmouseover='swapImage(\"changeYear\",\"drop2.gif\");this.style.borderColor=\"#88AAFF\";window.status=\""+selectYearMessage+"\"'	onmouseout='swapImage(\"changeYear\",\"drop1.gif\");this.style.borderColor=\"#ffffff\";window.status=\"\"'	onclick='popUpYear()'></span>&nbsp;";
 			
-			document.getElementById("caption").innerHTML  =	sHTML1
+			document.getElementById("caption").innerHTML  =	sHTML1;
 
-			bPageLoaded=true
+			bPageLoaded=true;
 		}
 	}
 
 	function hideCalendar()	{
-		crossobj.visibility="hidden"
-		if (crossMonthObj != null){crossMonthObj.visibility="hidden"}
-		if (crossYearObj !=	null){crossYearObj.visibility="hidden"}
+		crossobj.visibility="hidden";
+		if (crossMonthObj != null){crossMonthObj.visibility="hidden";}
+		if (crossYearObj !=	null){crossYearObj.visibility="hidden";}
 
 	    showElement( 'SELECT' );
 		showElement( 'APPLET' );
@@ -188,90 +188,90 @@
 
 	function constructDate(d,m,y)
 	{
-		sTmp = dateFormat
-		sTmp = sTmp.replace	("dd","<e>")
-		sTmp = sTmp.replace	("d","<d>")
-		sTmp = sTmp.replace	("<e>",padZero(d))
-		sTmp = sTmp.replace	("<d>",d)
-		sTmp = sTmp.replace	("mmmm","<p>")
-		sTmp = sTmp.replace	("mmm","<o>")
-		sTmp = sTmp.replace	("mm","<n>")
-		sTmp = sTmp.replace	("m","<m>")
-		sTmp = sTmp.replace	("<m>",m+1)
-		sTmp = sTmp.replace	("<n>",padZero(m+1))
-		sTmp = sTmp.replace	("<o>",monthName[m])
-		sTmp = sTmp.replace	("<p>",monthName2[m])
-		sTmp = sTmp.replace	("yyyy",y)
-		return sTmp.replace ("yy",padZero(y%100))
+		sTmp = dateFormat;
+		sTmp = sTmp.replace	("dd","<e>");
+		sTmp = sTmp.replace	("d","<d>");
+		sTmp = sTmp.replace	("<e>",padZero(d));
+		sTmp = sTmp.replace	("<d>",d);
+		sTmp = sTmp.replace	("mmmm","<p>");
+		sTmp = sTmp.replace	("mmm","<o>");
+		sTmp = sTmp.replace	("mm","<n>");
+		sTmp = sTmp.replace	("m","<m>");
+		sTmp = sTmp.replace	("<m>",m+1);
+		sTmp = sTmp.replace	("<n>",padZero(m+1));
+		sTmp = sTmp.replace	("<o>",monthName[m]);
+		sTmp = sTmp.replace	("<p>",monthName2[m]);
+		sTmp = sTmp.replace	("yyyy",y);
+		return sTmp.replace ("yy",padZero(y%100));
 	}
 
 	function closeCalendar() {
-		var	sTmp
+		var	sTmp;
 
 		hideCalendar();
-		ctlToPlaceValue.value =	constructDate(dateSelected,monthSelected,yearSelected)
+		ctlToPlaceValue.value =	constructDate(dateSelected,monthSelected,yearSelected);
 	}
 
 	/*** Month Pulldown	***/
 
 	function StartDecMonth()
 	{
-		intervalID1=setInterval("decMonth()",80)
+		intervalID1=setInterval("decMonth()",80);
 	}
 
 	function StartIncMonth()
 	{
-		intervalID1=setInterval("incMonth()",80)
+		intervalID1=setInterval("incMonth()",80);
 	}
 
 	function incMonth () {
-		monthSelected++
+		monthSelected++;
 		if (monthSelected>11) {
-			monthSelected=0
-			yearSelected++
+			monthSelected=0;
+			yearSelected++;
 		}
-		constructCalendar()
+		constructCalendar();
 	}
 
 	function decMonth () {
-		monthSelected--
+		monthSelected--;
 		if (monthSelected<0) {
-			monthSelected=11
-			yearSelected--
+			monthSelected=11;
+			yearSelected--;
 		}
-		constructCalendar()
+		constructCalendar();
 	}
 
 	function constructMonth() {
-		popDownYear()
+		popDownYear();
 		if (!monthConstructed) {
-			sHTML =	""
+			sHTML =	"";
 			for	(i=0; i<12;	i++) {
 				sName =	monthName[i];
 				if (i==monthSelected){
-					sName =	"<B>" +	sName +	"</B>"
+					sName =	"<B>" +	sName +	"</B>";
 				}
-				sHTML += "<tr><td id='m" + i + "' onmouseover='this.style.backgroundColor=\"#FFCC99\"' onmouseout='this.style.backgroundColor=\"\"' style='cursor:pointer' onclick='monthConstructed=false;monthSelected=" + i + ";constructCalendar();popDownMonth();event.cancelBubble=true'>&nbsp;" + sName + "&nbsp;</td></tr>"
+				sHTML += "<tr><td id='m" + i + "' onmouseover='this.style.backgroundColor=\"#FFCC99\"' onmouseout='this.style.backgroundColor=\"\"' style='cursor:pointer' onclick='monthConstructed=false;monthSelected=" + i + ";constructCalendar();popDownMonth();event.cancelBubble=true'>&nbsp;" + sName + "&nbsp;</td></tr>";
 			}
 
-			document.getElementById("selectMonth").innerHTML = "<table width=70	style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;' bgcolor='#FFFFDD' cellspacing=0 onmouseover='clearTimeout(timeoutID1)'	onmouseout='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"popDownMonth()\",100);event.cancelBubble=true'>" +	sHTML +	"</table>"
+			document.getElementById("selectMonth").innerHTML = "<table width=70	style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;' bgcolor='#FFFFDD' cellspacing=0 onmouseover='clearTimeout(timeoutID1)'	onmouseout='clearTimeout(timeoutID1);timeoutID1=setTimeout(\"popDownMonth()\",100);event.cancelBubble=true'>" +	sHTML +	"</table>";
 
-			monthConstructed=true
+			monthConstructed=true;
 		}
 	}
 
 	function popUpMonth() {
-		constructMonth()
-		crossMonthObj.visibility = (dom||ie)? "visible"	: "show"
-		crossMonthObj.left = parseInt(crossobj.left) + 50
-		crossMonthObj.top =	parseInt(crossobj.top) + 26
+		constructMonth();
+		crossMonthObj.visibility = (dom||ie)? "visible"	: "show";
+		crossMonthObj.left = parseInt(crossobj.left) + 50;
+		crossMonthObj.top =	parseInt(crossobj.top) + 26;
 
 		hideElement( 'SELECT', document.getElementById("selectMonth") );
 		hideElement( 'APPLET', document.getElementById("selectMonth") );			
 	}
 
 	function popDownMonth()	{
-		crossMonthObj.visibility= "hidden"
+		crossMonthObj.visibility= "hidden";
 	}
 
 	/*** Year Pulldown ***/
@@ -290,11 +290,11 @@
 	}
 
 	function constructYear() {
-		popDownMonth()
-		sHTML =	""
+		popDownMonth();
+		sHTML =	"";
 		if (!yearConstructed) {
 
-			sHTML =	""
+			sHTML =	"";
 
 			nStartingYear =	yearNow;
 			
@@ -303,40 +303,40 @@
 			for	(i=yearNow; i>=(yearNow-30); i--) {		
 				sName =	i;
 				if (i==yearSelected){
-					sName =	"<B>" +	sName +	"</B>"
+					sName =	"<B>" +	sName +	"</B>";
 				}
 
-				sHTML += "<tr><td id='y" + sName + "' onmouseover='this.style.backgroundColor=\"#FFCC99\"' onmouseout='this.style.backgroundColor=\"\"' style='cursor:pointer' onclick='selectYear("+i+");event.cancelBubble=true'>&nbsp;" + sName + "&nbsp;</td></tr>"
+				sHTML += "<tr><td id='y" + sName + "' onmouseover='this.style.backgroundColor=\"#FFCC99\"' onmouseout='this.style.backgroundColor=\"\"' style='cursor:pointer' onclick='selectYear("+i+");event.cancelBubble=true'>&nbsp;" + sName + "&nbsp;</td></tr>";
 			}
 
-			sHTML += ""
+			sHTML += "";
 
-			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='#FFFFDD' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>"
+			document.getElementById("selectYear").innerHTML	= "<table width=44 style='font-family:arial; font-size:11px; border-width:1; border-style:solid; border-color:#a0a0a0;'	bgcolor='#FFFFDD' onmouseover='clearTimeout(timeoutID2)' onmouseout='clearTimeout(timeoutID2);timeoutID2=setTimeout(\"popDownYear()\",100)' cellspacing=0>"	+ sHTML	+ "</table>";
 
-			yearConstructed	= true
+			yearConstructed	= true;
 		}
 	}
 
 	function popDownYear() {
-		clearInterval(intervalID1)
-		clearTimeout(timeoutID1)
-		clearInterval(intervalID2)
-		clearTimeout(timeoutID2)
-		crossYearObj.visibility= "hidden"
+		clearInterval(intervalID1);
+		clearTimeout(timeoutID1);
+		clearInterval(intervalID2);
+		clearTimeout(timeoutID2);
+		crossYearObj.visibility= "hidden";
 	}
 
 	function popUpYear() {
-		var	leftOffset
+		var	leftOffset;
 
-		constructYear()
-		crossYearObj.visibility	= (dom||ie)? "visible" : "show"
-		leftOffset = parseInt(crossobj.left) + document.getElementById("spanYear").offsetLeft
+		constructYear();
+		crossYearObj.visibility	= (dom||ie)? "visible" : "show";
+		leftOffset = parseInt(crossobj.left) + document.getElementById("spanYear").offsetLeft;
 		if (ie)
 		{
-			leftOffset += 6
+			leftOffset += 6;
 		}
-		crossYearObj.left =	leftOffset
-		crossYearObj.top = parseInt(crossobj.top) +	26
+		crossYearObj.left =	leftOffset;
+		crossYearObj.top = parseInt(crossobj.top) +	26;
 	}
 
 	/*** calendar ***/
@@ -376,78 +376,78 @@
    }
 
 	function constructCalendar () {
-		var aNumDays = Array (31,0,31,30,31,30,31,31,30,31,30,31)
+		var aNumDays = Array (31,0,31,30,31,30,31,31,30,31,30,31);
 
-		var dateMessage
-		var	startDate =	new	Date (yearSelected,monthSelected,1)
-		var endDate
+		var dateMessage;
+		var	startDate =	new	Date (yearSelected,monthSelected,1);
+		var endDate;
 
 		if (monthSelected==1)
 		{
 			endDate	= new Date (yearSelected,monthSelected+1,1);
 			endDate	= new Date (endDate	- (24*60*60*1000));
-			numDaysInMonth = endDate.getDate()
+			numDaysInMonth = endDate.getDate();
 		}
 		else
 		{
 			numDaysInMonth = aNumDays[monthSelected];
 		}
 
-		datePointer	= 0
-		dayPointer = startDate.getDay() - startAt
+		datePointer	= 0;
+		dayPointer = startDate.getDay() - startAt;
 		
 		if (dayPointer<0)
 		{
-			dayPointer = 6
+			dayPointer = 6;
 		}
 
-		sHTML =	"<table	 border=0 style='font-family:verdana;font-size:10px;'><tr>"
+		sHTML =	"<table	 border=0 style='font-family:verdana;font-size:10px;'><tr>";
 
 		if (showWeekNumber==1)
 		{
-			sHTML += "<td width=27><b>" + weekString + "</b></td><td width=1 rowspan=7 bgcolor='#d0d0d0' style='padding:0px'><img src='"+imgDir+"divider.gif' width=1></td>"
+			sHTML += "<td width=27><b>" + weekString + "</b></td><td width=1 rowspan=7 bgcolor='#d0d0d0' style='padding:0px'><img src='"+imgDir+"divider.gif' width=1></td>";
 		}
 
 		for	(i=0; i<7; i++)	{
-			sHTML += "<td width='27' align='right'><B>"+ dayName[i]+"</B></td>"
+			sHTML += "<td width='27' align='right'><B>"+ dayName[i]+"</B></td>";
 		}
-		sHTML +="</tr><tr>"
+		sHTML +="</tr><tr>";
 		
 		if (showWeekNumber==1)
 		{
-			sHTML += "<td align=right>" + WeekNbr(startDate) + "&nbsp;</td>"
+			sHTML += "<td align=right>" + WeekNbr(startDate) + "&nbsp;</td>";
 		}
 
 		for	( var i=1; i<=dayPointer;i++ )
 		{
-			sHTML += "<td>&nbsp;</td>"
+			sHTML += "<td>&nbsp;</td>";
 		}
 	
 		for	( datePointer=1; datePointer<=numDaysInMonth; datePointer++ )
 		{
 			dayPointer++;
-			sHTML += "<td align=right>"
-			sStyle=styleAnchor
+			sHTML += "<td align=right>";
+			sStyle=styleAnchor;
 			if ((datePointer==odateSelected) &&	(monthSelected==omonthSelected)	&& (yearSelected==oyearSelected))
-			{ sStyle+=styleLightBorder }
+			{ sStyle+=styleLightBorder; }
 
-			sHint = ""
+			sHint = "";
 			for (k=0;k<HolidaysCounter;k++)
 			{
 				if ((parseInt(Holidays[k].d)==datePointer)&&(parseInt(Holidays[k].m)==(monthSelected+1)))
 				{
 					if ((parseInt(Holidays[k].y)==0)||((parseInt(Holidays[k].y)==yearSelected)&&(parseInt(Holidays[k].y)!=0)))
 					{
-						sStyle+="background-color:#FFDDDD;"
-						sHint+=sHint==""?Holidays[k].desc:"\n"+Holidays[k].desc
+						sStyle+="background-color:#FFDDDD;";
+						sHint+=sHint==""?Holidays[k].desc:"\n"+Holidays[k].desc;
 					}
 				}
 			}
 
-			var regexp= /\"/g
-			sHint=sHint.replace(regexp,"&quot;")
+			var regexp= /\"/g;
+			sHint=sHint.replace(regexp,"&quot;");
 
-			dateMessage = "onmousemove='window.status=\""+selectDateMessage.replace("[date]",constructDate(datePointer,monthSelected,yearSelected))+"\"' onmouseout='window.status=\"\"' "
+			dateMessage = "onmousemove='window.status=\""+selectDateMessage.replace("[date]",constructDate(datePointer,monthSelected,yearSelected))+"\"' onmouseout='window.status=\"\"' ";
 
 			var f1= new Date(yearSelected,monthSelected,datePointer);
 //------------------------------------TERMINAR LA FUNCION EN 0 PARA QUE INICIE EN EL DIA ACTUAL EN LA SIGUIENTE LINEA----------------------------------------------
@@ -459,84 +459,84 @@
 			
 			if ((datePointer==nDia)&&(monthSelected==nMes)&&(yearSelected==nAno))
 			//{ sHTML += "<b style='"+sStyle+"'><font color=#ff0000>&nbsp;" + datePointer + "</font>&nbsp;</b>"}
-			{ sHTML += "<b><a "+dateMessage+" title=\"" + sHint + "\" style='"+sStyle+"' href='javascript:dateSelected="+datePointer+";closeCalendar();'><font color=#ff0000>&nbsp;" + datePointer + "</font>&nbsp;</a></b>"}
+			{ sHTML += "<b><a "+dateMessage+" title=\"" + sHint + "\" style='"+sStyle+"' href='javascript:dateSelected="+datePointer+";closeCalendar();'><font color=#ff0000>&nbsp;" + datePointer + "</font>&nbsp;</a></b>";}
 			//else if	(dayPointer % 7 == (startAt * -1)+1)
 			//{ sHTML += "<a "+dateMessage+" title=\"" + sHint + "\" style='"+sStyle+"' href='javascript:dateSelected="+datePointer + ";closeCalendar();'>&nbsp;<font color=#909090>" + datePointer + "</font>&nbsp;</a>" }
 			else if (FechaMenor(fa,f1)) //((datePointer<dateNow)&&(monthSelected<=monthNow)&&(yearSelected=yearNow))
-			{ sHTML += "&nbsp;<font color=#909090>" + datePointer + "</font>&nbsp;" }
+			{ sHTML += "&nbsp;<font color=#909090>" + datePointer + "</font>&nbsp;"; }
 			else
-			{ sHTML += "<a "+dateMessage+" title=\"" + sHint + "\" style='"+sStyle+"' href='javascript:dateSelected="+datePointer + ";closeCalendar();'>&nbsp;" + datePointer + "&nbsp;</a>" }
+			{ sHTML += "<a "+dateMessage+" title=\"" + sHint + "\" style='"+sStyle+"' href='javascript:dateSelected="+datePointer + ";closeCalendar();'>&nbsp;" + datePointer + "&nbsp;</a>"; }
 
-			sHTML += ""
+			sHTML += "";
 			if ((dayPointer+startAt) % 7 == startAt) { 
-				sHTML += "</tr><tr>" 
+				sHTML += "</tr><tr>" ;
 				if ((showWeekNumber==1)&&(datePointer<numDaysInMonth))
 				{
-					sHTML += "<td align=right>" + (WeekNbr(new Date(yearSelected,monthSelected,datePointer+1))) + "&nbsp;</td>"
+					sHTML += "<td align=right>" + (WeekNbr(new Date(yearSelected,monthSelected,datePointer+1))) + "&nbsp;</td>";
 				}
 			}
 		}
 
-		document.getElementById("content").innerHTML   = sHTML
-		document.getElementById("spanMonth").innerHTML = "&nbsp;" +	monthName[monthSelected] + "&nbsp;<IMG id='changeMonth' SRC='"+imgDir+"drop1.gif' WIDTH='12' HEIGHT='10' BORDER=0>"
-		document.getElementById("spanYear").innerHTML =	"&nbsp;" + yearSelected	+ "&nbsp;<IMG id='changeYear' SRC='"+imgDir+"drop1.gif' WIDTH='12' HEIGHT='10' BORDER=0>"
+		document.getElementById("content").innerHTML   = sHTML;
+		document.getElementById("spanMonth").innerHTML = "&nbsp;" +	monthName[monthSelected] + "&nbsp;<IMG id='changeMonth' SRC='"+imgDir+"drop1.gif' WIDTH='12' HEIGHT='10' BORDER=0>";
+		document.getElementById("spanYear").innerHTML =	"&nbsp;" + yearSelected	+ "&nbsp;<IMG id='changeYear' SRC='"+imgDir+"drop1.gif' WIDTH='12' HEIGHT='10' BORDER=0>";
 	}
 
 	function popUpCalendar(ctl,	ctl2, format) {
-		var	leftpos=-190
-		var	toppos=-10
+		var	leftpos=-190;
+		var	toppos=-10;
 		
 		if (bPageLoaded)
 		{
 			if ( crossobj.visibility ==	"hidden" ) {
-				ctlToPlaceValue	= ctl2
+				ctlToPlaceValue	= ctl2;
 				dateFormat=format;
 
-				formatChar = " "
-				aFormat	= dateFormat.split(formatChar)
+				formatChar = " ";
+				aFormat	= dateFormat.split(formatChar);
 				if (aFormat.length<3)
 				{
-					formatChar = "/"
-					aFormat	= dateFormat.split(formatChar)
+					formatChar = "/";
+					aFormat	= dateFormat.split(formatChar);
 					if (aFormat.length<3)
 					{
-						formatChar = "."
-						aFormat	= dateFormat.split(formatChar)
+						formatChar = ".";
+						aFormat	= dateFormat.split(formatChar);
 						if (aFormat.length<3)
 						{
-							formatChar = "-"
-							aFormat	= dateFormat.split(formatChar)
+							formatChar = "-";
+							aFormat	= dateFormat.split(formatChar);
 							if (aFormat.length<3)
 							{
 								// invalid date	format
-								formatChar=""
+								formatChar="";
 							}
 						}
 					}
 				}
 
-				tokensChanged =	0
+				tokensChanged =	0;
 				if ( formatChar	!= "" )
 				{
 					// use user's date
-					aData =	ctl2.value.split(formatChar)
+					aData =	ctl2.value.split(formatChar);
 
 					for	(i=0;i<3;i++)
 					{
 						if ((aFormat[i]=="d") || (aFormat[i]=="dd"))
 						{
-							dateSelected = parseInt(aData[i], 10)
-							tokensChanged ++
+							dateSelected = parseInt(aData[i], 10);
+							tokensChanged ++;
 						}
 						else if	((aFormat[i]=="m") || (aFormat[i]=="mm"))
 						{
-							monthSelected =	parseInt(aData[i], 10) - 1
-							tokensChanged ++
+							monthSelected =	parseInt(aData[i], 10) - 1;
+							tokensChanged ++;
 						}
 						else if	(aFormat[i]=="yyyy")
 						{
-							yearSelected = parseInt(aData[i], 10)
-							tokensChanged ++
+							yearSelected = parseInt(aData[i], 10);
+							tokensChanged ++;
 						}
 						else if	(aFormat[i]=="mmm")
 						{
@@ -544,8 +544,8 @@
 							{
 								if (aData[i]==monthName[j])
 								{
-									monthSelected=j
-									tokensChanged ++
+									monthSelected=j;
+									tokensChanged ++;
 								}
 							}
 						}
@@ -555,8 +555,8 @@
 							{
 								if (aData[i]==monthName2[j])
 								{
-									monthSelected=j
-									tokensChanged ++
+									monthSelected=j;
+									tokensChanged ++;
 								}
 							}
 						}
@@ -571,26 +571,26 @@
    					var nMes = Number(temp.substr(3, 2)); 
    					var nAno = Number(temp.substr(6, 4)); 
 			
-					dateSelected = nDia
-					monthSelected =	nMes
-					yearSelected = nAno
+					dateSelected = nDia;
+					monthSelected =	nMes;
+					yearSelected = nAno;
 				}
 
-				odateSelected=dateSelected
-				omonthSelected=monthSelected
-				oyearSelected=yearSelected
+				odateSelected=dateSelected;
+				omonthSelected=monthSelected;
+				oyearSelected=yearSelected;
 
-				aTag = ctl
+				aTag = ctl;
 				do {
 					aTag = aTag.offsetParent;
 					leftpos	+= aTag.offsetLeft;
 					toppos += aTag.offsetTop;
 				} while(aTag.tagName!="BODY");
 
-				crossobj.left =	fixedX==-1 ? ctl.offsetLeft	+ leftpos :	fixedX
-				crossobj.top = fixedY==-1 ?	ctl.offsetTop +	toppos + ctl.offsetHeight +	2 :	fixedY
+				crossobj.left =	fixedX==-1 ? ctl.offsetLeft	+ leftpos :	fixedX;
+				crossobj.top = fixedY==-1 ?	ctl.offsetTop +	toppos + ctl.offsetHeight +	2 :	fixedY;
 				constructCalendar (1, monthSelected, yearSelected);
-				crossobj.visibility=(dom||ie)? "visible" : "show"
+				crossobj.visibility=(dom||ie)? "visible" : "show";
 
 				hideElement( 'SELECT', document.getElementById("calendar") );
 				hideElement( 'APPLET', document.getElementById("calendar") );			
@@ -599,10 +599,10 @@
 			}
 			else
 			{
-				hideCalendar()
-				if (ctlNow!=ctl) {popUpCalendar(ctl, ctl2, format)}
+				hideCalendar();
+				if (ctlNow!=ctl) {popUpCalendar(ctl, ctl2, format);}
 			}
-			ctlNow = ctl
+			ctlNow = ctl;
 		}
 		
 	}
@@ -610,24 +610,24 @@
 	document.onkeypress = function hidecal1 () { 
 		if (event.keyCode==27) 
 		{
-			hideCalendar()
+			hideCalendar();
 		}
-	}
+	};
 	document.onclick = function hidecal2 () { 		
 		if (!bShow)
 		{
-			hideCalendar()
+			hideCalendar();
 		}
-		bShow = false
-	}
+		bShow = false;
+	};
 
 	if(ie)
 	{
-		init()
+		init();
 	}
 	else
 	{
-		window.onload=init
+		window.onload=init;
 	}
 
 // ************ ADICIONAR DIAS A UNA FECHA ***********

@@ -135,9 +135,8 @@
 		<div class="boxed">
 			<h2 class="section">Que te parece nuestra pagina</h2>
 			<div class="content">
-				<ul>
-					<li><?php include "votos/rate.php"; ?></li>
-				</ul>
+				<a><br></br></a>
+				<a><?php include "votos/rate.php"; ?></a>
 			</div>
 		</div>
 	</div>
