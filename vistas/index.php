@@ -140,7 +140,7 @@
 			<h2 class="section">Que te parece nuestra pagina</h2>
 			<div class="content">
 				<ul>
-					<li><?php include "votos2/rate.php"; ?> </li>
+					<li><?php include "votos/rate.php"; ?> </li>
 				</ul>
 			</div>
 		</div>
