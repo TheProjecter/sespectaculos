@@ -7,9 +7,6 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="./votos/css/rating.css" />
-<script type="text/javascript"  src="./votos/js/behavior.js"></script>
-<script type="text/javascript"  src="./votos/js/rating.js"></script>
 </head>
 <body>
 <div id="header">
@@ -26,7 +23,7 @@
 
 <div id="login">
 <div  id="tabla2" style="display: none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios"; method="post">
+  	<form action="index.php?controlador=ingresar&ampAccion=usuarios"; method="post">
     <table align="center" width="65%">
 	<tr>
 		<td align="center" class="imgTituloTabla">
@@ -63,8 +60,7 @@
         <tr><td><a class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table>   
-  	
+   </table>     	
       </form>
   	</div>
 </div>
@@ -81,7 +77,7 @@
    				}else{  do {
 			?>
 			<div style="float:left; margin-left: 8em; margin-bottom: 15%;">
-    			<a href="index.php?controlador=opcionesAdministrador&opcion=informacion&valor=<?php echo $row_Listado['idInformacion']?>">
+    			<a href="index.php?controlador=opcionesAdministrador&ampopcion=informacion&ampvalor=<?php echo $row_Listado['idInformacion']?>">
 				<img src="<?php echo  $row_Listado['Ruta']?>" alt="Gestor de usuarios" title="Gestor de Usuarios" width="110" height="150"></img>			
 				<!--<br></br><span style="text-align: center;"><?php echo  $row_Listado['NombreEspectaculo']?></span>
 				--></a>
@@ -140,7 +136,7 @@
 			<h2 class="section">Que te parece nuestra pagina</h2>
 			<div class="content">
 				<ul>
-					<li><?php include "votos/rate.php"; ?> </li>
+					<li><?php include "votos/rate.php"; ?></li>
 				</ul>
 			</div>
 		</div>
@@ -163,8 +159,7 @@
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="¡CSS Válido!" />
 </a>
-</p>
-     
+</p>     
 </div>
 </body>
 </html>
