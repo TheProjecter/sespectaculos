@@ -84,50 +84,50 @@ function volver(){
 	</table>	
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
-      <td align="right" class="letraLogin">Nombre:</td>
-      <td><input title="Nombre" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="32" class="inputTexto"/></td>
+      <td align="right" class="letraLogin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Nombre:</td>
+      <td><input title="Nombre" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="40" class="inputTexto"/></td>
     </tr>	
      <tr valign="baseline">
       <td align="right" class="letraLogin">Apellidos:</td>
-      <td><input title="Apellidos" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Apellidos" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">NIF:</td>
-      <td><input title="Dni" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Dni" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Edad:</td>
-      <td><input title="Edad" type="text" name="edad" value="<?php echo $row_MODIFICAR['Edad']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Edad" type="text" name="edad" value="<?php echo $row_MODIFICAR['Edad']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Telefono:</td>
-      <td><input title="Telefono" type="text" name="telefono" value="<?php echo $row_MODIFICAR['Telefono']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Telefono" type="text" name="telefono" value="<?php echo $row_MODIFICAR['Telefono']; ?>" size="40" class="inputTexto"/></td>
     </tr>
      <tr valign="baseline">
       <td align="right" class="letraLogin">Provincia:</td>
-      <td><input title="Provincia" type="text" name="provincia" value="<?php echo $row_MODIFICAR['Provincia']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Provincia" type="text" name="provincia" value="<?php echo $row_MODIFICAR['Provincia']; ?>" size="40" class="inputTexto"/></td>
     </tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Localidad:</td>
-      <td><input title="Localidad" type="text" name="localidad" value="<?php echo $row_MODIFICAR['Localidad']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Localidad" type="text" name="localidad" value="<?php echo $row_MODIFICAR['Localidad']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Direccion:</td>
-      <td><input title="Direccion" type="text" name="direccion" value="<?php echo $row_MODIFICAR['Direccion']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Direccion" type="text" name="direccion" value="<?php echo $row_MODIFICAR['Direccion']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Email:</td>
-      <td><input title="Email" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Email" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="40" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Cod. Postal:</td>
-      <td><input title="Codigo Postal" type="text" name="cp" value="<?php echo $row_MODIFICAR['Cp']; ?>" size="32" class="inputTexto"/></td>
+      <td><input title="Codigo Postal" type="text" name="cp" value="<?php echo $row_MODIFICAR['Cp']; ?>" size="40" class="inputTexto"/></td>
     </tr>
    </table>    
     <table align="center">
- 		<tr valign="baseline">
-      <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"/><input title="Modificar" type="submit" value="Modificar" class="inputTexto"/></td>
+ 	<tr valign="baseline">
+     <td><input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"/><input title="Modificar" type="submit" value="Modificar" class="inputTexto"/></td>
     </tr>
   	</table>
 	<input type="hidden" name="MM_update" value="form1"></input>

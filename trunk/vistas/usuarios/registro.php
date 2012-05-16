@@ -87,44 +87,45 @@ function volver(){
 	
 	<table align="center" width="100%" class="bordeTablaGris">
     <tr valign="baseline">
-      <td  align="right" class="letraLogin">Usuario:</td>
-      <td><input title="Usuario" type="text" name="usuario"  value="" size="32" class="inputTexto"></input></td>
+      <td  align="right" class="letraLogin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Usuario:</td>
+      <td><input title="Usuario" type="text" name="usuario"  value="" size="40" class="inputTexto"></input></td>
     </tr>
      <tr valign="baseline">
       <td  align="right" class="letraLogin">Contrase&ntilde;a:</td>
-      <td><input title="Contraseña" type="password" name="contrasenha" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Contraseña" type="password" name="contrasenha" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Repetir Contrase&ntilde;a:</td>
-      <td><input title="Repetir Contraseña" type="password" name="pass"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Repetir Contraseña" type="password" name="pass"  value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">E-mail:</td>
-      <td><input title="Email" type="text" name="email" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Email" type="text" name="email" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Nombre:</td>
-      <td><input title="Nombre" type="text" name="nombre" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Nombre" type="text" name="nombre" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Apellidos:</td>
-      <td><input title="Apellidos" type="text" name="apellidos"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Apellidos" type="text" name="apellidos"  value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Edad:</td>
-      <td><input title="Edad" type="text" name="edad"  value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Edad" type="text" name="edad"  value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Dni:</td>
-      <td><input title="Dni" type="text" name="dni" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Dni" type="text" name="dni" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Telefono:</td>
-      <td><input title="Telefono" type="text" name="telefono" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Telefono" type="text" name="telefono" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Direccion:</td>
-      <td><input title="Direccion" type="text" name="direccion" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Direccion" type="text" name="direccion" value="" size="40" class="inputTexto"></input></td>
     </tr>
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Provincia:</td>
@@ -139,11 +140,11 @@ function volver(){
     </tr>  
 	<tr valign="baseline">
       <td  align="right" class="letraLogin">Localidad:</td>
-      <td><input title="Localidad" type="text" name="localidad" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Localidad" type="text" name="localidad" value="" size="40" class="inputTexto"></input></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Cod. Postal:</td>
-      <td><input title="Codigo Postal" type="text" name="cp" value="" size="32" class="inputTexto"></input></td>
+      <td><input title="Codigo Postal" type="text" name="cp" value="" size="40" class="inputTexto"></input></td>
     </tr>
    </table>    
     <table align="center">
