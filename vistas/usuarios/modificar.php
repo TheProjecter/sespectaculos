@@ -7,11 +7,10 @@
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
-<script>
+<script type="text/javascript">
 function volver(){
 	parent.location.href='index.php?controlador=usuarios';
 }
-
 </script>
 </head>
 <body>
@@ -28,10 +27,9 @@ function volver(){
 		</ul>
 	</div>
 </div>
-
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -50,7 +48,7 @@ function volver(){
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
@@ -75,7 +73,6 @@ function volver(){
 </div>
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculo.com" width="500" height="120" style="margin-left: 15%;" /></div>
 <br></br>
-
 <form method="post" name="form1" enctype="multipart/form-data" action="<?php echo $editFormAction; ?>" onsubmit="return valida(this);">
 	
 	<table align="center" width="100%">
@@ -88,53 +85,53 @@ function volver(){
 	<table align="center" width="100%" class="bordeTablaGris">
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Nombre:</td>
-      <td><input title="Nombre" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Nombre" type="text" name="nombre" value="<?php echo $row_MODIFICAR['Nombre']; ?>" size="32" class="inputTexto"/></td>
     </tr>	
      <tr valign="baseline">
       <td align="right" class="letraLogin">Apellidos:</td>
-      <td><input title="Apellidos" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Apellidos" type="text" name="apellido" value="<?php echo $row_MODIFICAR['Apellidos']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">NIF:</td>
-      <td><input title="Dni" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Dni" type="text" name="dni" value="<?php echo $row_MODIFICAR['Dni']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Edad:</td>
-      <td><input title="Edad" type="text" name="edad" value="<?php echo $row_MODIFICAR['Edad']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Edad" type="text" name="edad" value="<?php echo $row_MODIFICAR['Edad']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Telefono:</td>
-      <td><input title="Telefono" type="text" name="telefono" value="<?php echo $row_MODIFICAR['Telefono']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Telefono" type="text" name="telefono" value="<?php echo $row_MODIFICAR['Telefono']; ?>" size="32" class="inputTexto"/></td>
     </tr>
      <tr valign="baseline">
       <td align="right" class="letraLogin">Provincia:</td>
-      <td><input title="Provincia" type="text" name="provincia" value="<?php echo $row_MODIFICAR['Provincia']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Provincia" type="text" name="provincia" value="<?php echo $row_MODIFICAR['Provincia']; ?>" size="32" class="inputTexto"/></td>
     </tr>
 	<tr valign="baseline">
       <td align="right" class="letraLogin">Localidad:</td>
-      <td><input title="Localidad" type="text" name="localidad" value="<?php echo $row_MODIFICAR['Localidad']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Localidad" type="text" name="localidad" value="<?php echo $row_MODIFICAR['Localidad']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Direccion:</td>
-      <td><input title="Direccion" type="text" name="direccion" value="<?php echo $row_MODIFICAR['Direccion']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Direccion" type="text" name="direccion" value="<?php echo $row_MODIFICAR['Direccion']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td align="right" class="letraLogin">Email:</td>
-      <td><input title="Email" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Email" type="text" name="email" value="<?php echo $row_MODIFICAR['Email']; ?>" size="32" class="inputTexto"/></td>
     </tr>
     <tr valign="baseline">
       <td  align="right" class="letraLogin">Cod. Postal:</td>
-      <td><input title="Codigo Postal" type="text" name="cp" value="<?php echo $row_MODIFICAR['Cp']; ?>" size="32" class="inputTexto"></input></td>
+      <td><input title="Codigo Postal" type="text" name="cp" value="<?php echo $row_MODIFICAR['Cp']; ?>" size="32" class="inputTexto"/></td>
     </tr>
    </table>    
     <table align="center">
  		<tr valign="baseline">
       <td  >&nbsp;</td>
-     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"></input><input title="Modificar" type="submit" value="Modificar" class="inputTexto"></input></td>
+     <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input title="Volver" type="button" value="Volver" onclick="volver()" class="inputTexto"/><input title="Modificar" type="submit" value="Modificar" class="inputTexto"/></td>
     </tr>
   	</table>
 	<input type="hidden" name="MM_update" value="form1"></input>
-    <input type="hidden" name="id" value="<?php echo $row_MODIFICAR['idUsuario']; ?>"></input>
+    <input type="hidden" name="id" value="<?php echo $row_MODIFICAR['idUsuario']; ?>"/>
 </form>
 	<div style="clear: both;">&nbsp;</div>
 	<div><br></br><br></br></div>

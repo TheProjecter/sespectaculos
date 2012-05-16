@@ -13,10 +13,10 @@ function volver(){
 	parent.location.href='index.php?controlador=usuarios';
 }
 function ir(){
-	parent.location.href='index.php?controlador=opcionesUsuario&opcion=busqueda';
+	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=busqueda';
 }
 function comprar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&opcion=comprar&entradas=<?php echo $row_Listado2['codEntrada']?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=comprar&amp;entradas=<?php echo $row_Listado2['codEntrada']?>';
 }
 </script>
 </head>
@@ -37,7 +37,7 @@ function comprar(){
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -56,7 +56,7 @@ function comprar(){
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
@@ -83,7 +83,7 @@ function comprar(){
 <br></br>
 <div id="colOneI">
 		<h2  class="section">Datos Contacto Vendedor</h2>
-		<div id="contentI" style="margin-top: 0.8em;">			
+		<div id="content" style="margin-top: 0.8em;">			
    			 <div> <a class="as">Nombre: </a>			<a class="bs"><?php echo $row_Listado['Nombre']; ?></a></div>
     		 <div> <a class="as">Apellidos: </a> 		<a class="bs"><?php echo $row_Listado['Apellidos']; ?></a></div>
    			 <div> <a class="as">Dni: </a>				<a class="bs"><?php echo $row_Listado['Dni']; ?></a></div>
@@ -112,7 +112,6 @@ function comprar(){
 </div>	
 
 <div id="contentII">
-
 <input type="button" title="Volver" value="Volver" onclick="volver()" style="margin-top: 50px;" />
 <input type="button" title="Nueva Busqueda" value="Nueva Busqueda" onclick="ir()" style="margin-top: 50px;" />
 <input type="button" title="Aceptar" value="Aceptar Oferta" onclick="comprar()" style="margin-top: 50px;" />
@@ -124,6 +123,23 @@ function comprar(){
 		
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>
+</div>
+<div align="right">
+<p>
+ <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+  </a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>     
 </div>
 </body>
 </html>

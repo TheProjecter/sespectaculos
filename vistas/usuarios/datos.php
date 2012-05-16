@@ -14,10 +14,10 @@ function confirmar ( mensaje ) {
 	}
 
 function rechazar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=interesado&cod=<?php echo $row_Listado['Dni']; ?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=interesado&amp;cod=<?php echo $row_Listado['Dni']; ?>';
 }
 function aceptar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&opcion=ultimo&cod2=<?php echo $cod2?>&cod=<?php echo $row_Listado['Dni'];?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=ultimo&amp;cod2=<?php echo $cod2?>&amp;cod=<?php echo $row_Listado['Dni'];?>';
 }
 </script>
 </head>
@@ -38,7 +38,7 @@ function aceptar(){
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -57,7 +57,7 @@ function aceptar(){
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
@@ -105,11 +105,26 @@ function aceptar(){
 </div>
 <div><br></br></div>
 <div><a href="index.php?controlador=usuarios"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
-
 <div><br></br><br></br></div>
-
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>
+</div>
+<div align="right">
+<p>
+ <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+  </a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>     
 </div>
 </body>
 </html> 

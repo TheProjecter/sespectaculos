@@ -109,6 +109,11 @@ a:hover {
 	margin: 0 auto;
 }
 
+#contentI {
+	width:90%;
+	margin: 0 auto;
+}
+
 #contentII {
 	margin-left:46%;
 }

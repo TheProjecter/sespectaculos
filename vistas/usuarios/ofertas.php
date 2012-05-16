@@ -35,7 +35,7 @@ function confirmar ( mensaje ) {
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -54,7 +54,7 @@ function confirmar ( mensaje ) {
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td >&nbsp;</td>
@@ -99,11 +99,9 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado['Lugar']; ?></td>
       <td><?php echo $row_Listado['Precio']; ?></td>
 	  <td><?php echo $row_Listado['estado']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=ofertas&cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td> 
-     
+      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=ofertas&amp;cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td>  
     </tr>
-   <?php } } while ($row_Listado = mysql_fetch_assoc($Listado));} ?>
-  
+   <?php } } while ($row_Listado = mysql_fetch_assoc($Listado));} ?>  
   </table>
   <table border="0" width="50%" align="center">
   <tr>

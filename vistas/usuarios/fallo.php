@@ -20,7 +20,7 @@ header('refresh:3; url=index.php?controlador=usuarios');
 		<ul>
 			<li><a href="index.php" accesskey="1" title="Inicio">Inicio</a></li>
 			<li><a href="#" accesskey="2" title="Login" onclick="funcion1a()">Login</a></li>
-			<li><a href="index.php?controlador=acceso" accesskey="3" title="Administracion">Administracion	</a></li>
+			<li><a href="index.php?controlador=acceso" accesskey="3" title="Administracion">Administracion</a></li>
 			<li><a href="./vistas/foro/index.php" accesskey="4" title="Sobre Nosotros">Foro</a></li>
 			<li><a href="./vistas/contacto/contactform.htm" accesskey="5" title="Contacta">Contacta</a></li>
 		</ul>
@@ -29,7 +29,7 @@ header('refresh:3; url=index.php?controlador=usuarios');
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -48,7 +48,7 @@ header('refresh:3; url=index.php?controlador=usuarios');
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
@@ -90,6 +90,23 @@ header('refresh:3; url=index.php?controlador=usuarios');
 
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>
+</div>
+<div align="right">
+<p>
+ <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" />
+  </a>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:70px;height:25px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:70px;height:25px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="¡CSS Válido!" />
+</a>
+</p>     
 </div>
 </body>
 </html>

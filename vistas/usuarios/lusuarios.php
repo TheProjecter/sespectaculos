@@ -33,7 +33,7 @@ function confirmar ( mensaje ) {
 
 <div id="login">
 <div id="tabla2" style="display:none;">  
-  	<form action="index.php?controlador=ingresar&Accion=usuarios" method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="68%">
 	<tr>
 		<td class="imgTituloTabla">
@@ -52,7 +52,7 @@ function confirmar ( mensaje ) {
       <td><input title="Contraseña" type="password" name="pass" size="28"></input></td>
     </tr>     
   </table>
-  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"  ><strong style="color: white;">aqui</strong></a></h1>
+  <h1 class="letraLogin" style="text-align: center; color: white;">Si no estas registrado pincha <a href="index.php?controlador=registro"><strong style="color: white;">aqui</strong></a></h1>
   <table align="center">
     <tr valign="baseline">
       <td >&nbsp;</td>
@@ -105,7 +105,7 @@ if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniacepta
       <td><?php echo $row_Listado1['Apellidos']; ?></td>
       <td><?php echo $row_Listado1['Usuario']; ?></td>
       <td><?php echo $row_Listado1['Evento']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&opcion=cuestionario&cod=<?php echo $row_Listado1['Dni']?>&cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" alt="MODIFICAR"/></a></td>  
+      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=cuestionario&amp;cod=<?php echo $row_Listado1['Dni']?>&amp;cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" alt="MODIFICAR"/></a></td>  
     </tr>
   <?php  }}while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
@@ -128,12 +128,11 @@ if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniacepta
           <a href="<?php printf("%s?pageNum_Listado=%d%s", $currentPage, $totalPages_Listado, $queryString_Listado); ?>"><img src="./vistas/img/Last.gif" alt="Ultima"></img></a>
           <?php } // Show if not last page ?>
     </td>
-  </tr>
- 
+  </tr> 
 </table>
 <?php if($totalRows_Listado==0 || $totalRows_Listado== null || $true==""){?><div><br></br><a style="margin-left: 45%;font-size: medium;"><?php  echo "No tienes valoraciones pendiente";} ?> </a></div>
 <div><br></br><br></br></div>
-<div><a href="index.php?controlador=opcionesUsuario&opcion=svaloracion"><img alt="volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=opcionesUsuario&amp;opcion=svaloracion"><img alt="volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 
 <div><br></br><br></br><br></br></div>
 <div id="footer">

@@ -35,7 +35,7 @@ function confirmar ( mensaje ) {
 
 <div id="login">
 <div id="tabla2" style="display: none;">
-<form action="index.php?controlador=ingresar&Accion=usuarios"
+<form action="index.php?controlador=ingresar&amp;Accion=usuarios"
         method="post">
 <table align="center" width="68%">
         <tr>
@@ -122,11 +122,11 @@ estas registrado pincha <a href="index.php?controlador=registro"><strong
                 <td><?php echo $row_Listado['Provincia']; ?></td>
                 <td><?php echo $row_Listado['Lugar']; ?></td>
                 <td><a
-                        href="index.php?controlador=opcionesUsuario&opcion=buscar<?php echo $url;?>"><img
+                        href="index.php?controlador=opcionesUsuario&amp;opcion=buscar<?php echo $url;?>"><img
                         src="./vistas/img/edit_f2.png" title="MODIFICAR" border="0"
                         alt="MODIFICAR" /></a></td>
                 <td><a
-                        href="index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=alertas&cod=<?php echo $row_Listado['idConsulta']; ?>"
+                        href="index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=alertas&amp;cod=<?php echo $row_Listado['idConsulta']; ?>"
                         onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img
                         src="./vistas/img/cancel_f2.png" title="ELIMINAR" border="0"
                         alt="ELIMINAR" /></a></td>
