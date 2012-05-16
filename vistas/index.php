@@ -7,6 +7,7 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="header">
@@ -20,10 +21,9 @@
 		</ul>
 	</div>
 </div>
-
 <div id="login">
 <div  id="tabla2" style="display: none;">  
-  	<form action="index.php?controlador=ingresar&ampAccion=usuarios"; method="post">
+  	<form action="index.php?controlador=ingresar&amp;Accion=usuarios" method="post">
     <table align="center" width="65%">
 	<tr>
 		<td align="center" class="imgTituloTabla">
@@ -77,7 +77,7 @@
    				}else{  do {
 			?>
 			<div style="float:left; margin-left: 8em; margin-bottom: 15%;">
-    			<a href="index.php?controlador=opcionesAdministrador&ampopcion=informacion&ampvalor=<?php echo $row_Listado['idInformacion']?>">
+    			<a href="index.php?controlador=opcionesAdministrador&amp;opcion=informacion&amp;valor=<?php echo $row_Listado['idInformacion']?>">
 				<img src="<?php echo  $row_Listado['Ruta']?>" alt="Gestor de usuarios" title="Gestor de Usuarios" width="110" height="150"></img>			
 				<!--<br></br><span style="text-align: center;"><?php echo  $row_Listado['NombreEspectaculo']?></span>
 				--></a>
