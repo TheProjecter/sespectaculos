@@ -8,10 +8,8 @@
 <meta name="description" content="" />
 <link href="./vistas/css/default.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="./votos/css/rating.css" />
-<script type="text/javascript"  src="./vistas/programas.js"></script>
 <script type="text/javascript"  src="./votos/js/behavior.js"></script>
 <script type="text/javascript"  src="./votos/js/rating.js"></script>
-
 </head>
 <body>
 <div id="header">
@@ -142,7 +140,7 @@
 			<h2 class="section">Que te parece nuestra pagina</h2>
 			<div class="content">
 				<ul>
-					<li><?php echo rating_bar('8'); ?> </li>
+					<li><?php include "votos2/rate.php"; ?> </li>
 				</ul>
 			</div>
 		</div>
