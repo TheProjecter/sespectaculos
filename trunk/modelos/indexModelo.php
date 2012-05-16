@@ -1,5 +1,5 @@
 <?php require 'Connections/informeUrb.php'; ?>
-<?php require './vistas/votos/_drawrating.php';
+<?php 
 
 mysql_select_db($database_informeUrb,$informeUrb);
 $query_Listado = "SELECT * FROM  infespectaculos";
