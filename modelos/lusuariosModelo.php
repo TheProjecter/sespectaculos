@@ -11,9 +11,8 @@ if (isset($_GET['pageNum_Listado'])) {
 }
 $startRow_Listado = $pageNum_Listado * $maxRows_Listado;
 
-
 mysql_select_db($database_informeUrb,$informeUrb);
-$query_Listado = "Select * from aceptada,entradas where codEntradas=codEntrada";
+$query_Listado = "Select * from aceptada,entradas where codEntrada=codEntradas";
 $query_limit_Listado = sprintf("%s LIMIT %d, %d", $query_Listado, $startRow_Listado, $maxRows_Listado);
 $Listado = mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 $row_Listado = mysql_fetch_assoc($Listado);

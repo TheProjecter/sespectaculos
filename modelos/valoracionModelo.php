@@ -14,7 +14,6 @@ $query_MODIFICAR = sprintf("SELECT * FROM usuarios WHERE Dni='$dni'", $colname_M
 $MODIFICAR = mysql_query($query_MODIFICAR, $informeUrb) or die(mysql_error());
 $row_MODIFICAR = mysql_fetch_assoc($MODIFICAR);
 
-
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
     
      $insertSQL= sprintf("INSERT INTO critica(Comentario,Valoracion,dniValorador,dniValorado) VALUES ('%s','%s','$dniv','$dni')",
@@ -30,14 +29,22 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 	mysql_select_db($database_informeUrb, $informeUrb);                                          
 	$Result1 = mysql_query($updateSQL, $informeUrb) or die(mysql_error());
 	
-	$updateSQL1 = sprintf("UPDATE aceptada   SET Valorado='Si' where codEntradas='$cod2'");
-	mysql_select_db($database_informeUrb, $informeUrb);                                          
-	$Result2 = mysql_query($updateSQL1, $informeUrb) or die(mysql_error());
-
+	mysql_select_db($database_informeUrb, $informeUrb);
+	$query_MODIFICAR1 = sprintf("SELECT * FROM entradas WHERE codEntrada='$cod2'", $colname_MODIFICAR);
+	$MODIFICAR1 = mysql_query($query_MODIFICAR1, $informeUrb) or die(mysql_error());
+	$row_MODIFICAR1 = mysql_fetch_assoc($MODIFICAR1);	
+	
+	if($row_MODIFICAR1['dniUsuario']!=$dniv){
+		$updateSQL1 = sprintf("UPDATE aceptada SET Valorado='Si' where codEntradas='$cod2'");
+		mysql_select_db($database_informeUrb, $informeUrb);                                          
+		$Result2 = mysql_query($updateSQL1, $informeUrb) or die(mysql_error());
+	}else{
+		$updateSQL1 = sprintf("UPDATE aceptada SET Valorado2='Si' where codEntradas='$cod2'");
+		mysql_select_db($database_informeUrb, $informeUrb);                                          
+		$Result2 = mysql_query($updateSQL1, $informeUrb) or die(mysql_error());
+	}
 ?>
- 	 <script type="text/javascript"> 
-	 
+ 	 <script type="text/javascript"> 	 
   		window.location="index.php?controlador=usuarios"; 
-
 	</script> 
  <?php }?>

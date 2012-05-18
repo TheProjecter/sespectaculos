@@ -88,24 +88,35 @@ function confirmar ( mensaje ) {
   </tr>
    <?php if($totalRows_Listado==0 || $totalRows_Listado== null){  
    }else{ do {  
-	
+   	//echo $dniaceptado."=".$row_Listado['dniUsuario'];
+		if($row_Listado['dniUsuario']==$dniaceptado){			
+			$dnilistado=$row_Listado['dniUsuarios'];
+			//echo $dnilistado;
+			mysql_select_db($database_informeUrb,$informeUrb);		
+			$query_Listado1 = "Select * from usuarios where Dni='$dnilistado'";
+			$Listado1 = mysql_query($query_Listado1, $informeUrb) or die(mysql_error());
+			$row_Listado1 = mysql_fetch_assoc($Listado1);
+		}else{
+			mysql_select_db($database_informeUrb,$informeUrb);
+			$query_Listado1 = "Select * from usuarios where Dni='$dniaceptado'";
+			$Listado1 = mysql_query($query_Listado1, $informeUrb) or die(mysql_error());
+			$row_Listado1 = mysql_fetch_assoc($Listado1);
+					
+		}
 		$cod=$row_Listado['codEntradas'];
-		mysql_select_db($database_informeUrb,$informeUrb);
-		$query_Listado1 = "Select * from usuarios,entradas where Dni=dniUsuario and codEntrada='$cod'";
-		$Listado1 = mysql_query($query_Listado1, $informeUrb) or die(mysql_error());
-		$row_Listado1 = mysql_fetch_assoc($Listado1);
+		$query_Listado2 = "Select * from entradas where codEntrada='$cod'";
+		$Listado2 = mysql_query($query_Listado2, $informeUrb) or die(mysql_error());
+		$row_Listado2 = mysql_fetch_assoc($Listado2);
 		
-		
-if($row_Listado['dniUsuarios']==$dniaceptado || $row_Listado1['Dni']==$dniaceptado){
+if($row_Listado['dniUsuario']==$dniaceptado && $row_Listado['Valorado2']=='No' || $row_Listado['dniUsuario']!=$dniaceptado && $row_Listado['Valorado']=='No'){
 	$true='false';
-	?>
-			    
+	?>			    
     <tr class="colorFila" align="center">       
       <td><?php echo $row_Listado1['Nombre']; ?></td>
       <td><?php echo $row_Listado1['Apellidos']; ?></td>
       <td><?php echo $row_Listado1['Usuario']; ?></td>
-      <td><?php echo $row_Listado1['Evento']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=cuestionario&amp;cod=<?php echo $row_Listado1['Dni']?>&amp;cod2=<?php echo $row_Listado1['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" alt="MODIFICAR"/></a></td>  
+      <td><?php echo $row_Listado2['Evento']; ?></td>
+      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=cuestionario&amp;cod=<?php echo $row_Listado1['Dni']?>&amp;cod2=<?php echo $row_Listado2['codEntrada'];?>" ><img src="./vistas/img/query.png" height="25" title="Modificar" border="0" alt="MODIFICAR"/></a></td>  
     </tr>
   <?php  }}while ($row_Listado = mysql_fetch_assoc($Listado)); }?>  
   </table>
