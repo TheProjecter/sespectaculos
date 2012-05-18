@@ -10,7 +10,7 @@
 <script language="javascript" src="./vistas/popcalendar.js" type="text/javascript"></script>
 <script type="text/javascript">
 function volver(){
-	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=lusuarios';
+	parent.location.href='index.php?controlador=opcionesUsuario&opcion=lusuarios';
 }
 </script>
 </head>
