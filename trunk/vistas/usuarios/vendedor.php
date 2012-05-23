@@ -13,10 +13,10 @@ function volver(){
 	parent.location.href='index.php?controlador=usuarios';
 }
 function ir(){
-	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=busqueda';
+	parent.location.href='index.php?controlador=opcionesUsuario&opcion=busqueda';
 }
 function comprar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=comprar&amp;entradas=<?php echo $row_Listado2['codEntrada']?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&opcion=comprar&entradas=<?php echo $row_Listado2['codEntrada']?>';
 }
 </script>
 </head>
