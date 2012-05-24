@@ -1,8 +1,2 @@
-<? 
-session_start(); 
-session_destroy(); 
-?> 
-<script>
-  			parent.location.href="index.php";
-</script>
-
+<?php
+require_once 'modelos/salirModelo.php';
