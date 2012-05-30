@@ -11,7 +11,7 @@ $updateSQL1= sprintf("UPDATE entradas SET Estado='Vendida' WHERE codEntrada='$en
 mysql_select_db($database_informeUrb, $informeUrb);
 $Result3 = mysql_query($updateSQL1, $informeUrb) or die(mysql_error());
 
-$insertSQL2= sprintf("INSERT INTO aceptada(dniUsuario,codEntradas) VALUES ('%s','%s')",
+$insertSQL2= sprintf("INSERT INTO aceptada(dniUsuarios,codEntradas) VALUES ('%s','%s')",
                        $_GET['cod'],
                        $_GET['cod2']);                
 mysql_select_db($database_informeUrb, $informeUrb);

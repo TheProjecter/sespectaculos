@@ -96,7 +96,7 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado1['Localidad']; ?></td>
       <td><?php echo $row_Listado1['Provincia']; ?></td>
       <td><?php echo $row_Listado1['Hora']; ?></td>
-	  <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=datos&amp;cod2=<?php echo $idUsuario?>&amp;cod=<?php echo $row_Listado1['dniUsuario']; ?>"><img src="./vistas/img/edit_f2.png" title="MODIFICAR" alt="MODIFICAR"/></a></td> 
+	  <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=datos&amp;cod2=<?php echo $codEntrada?>&amp;cod=<?php echo $row_Listado1['dniUsuario']; ?>"><img src="./vistas/img/edit_f2.png" title="MODIFICAR" alt="MODIFICAR"/></a></td> 
 	  <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=interesado&amp;cod=<?php echo $row_Listado1['dniUsuario'] ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td> 
     </tr>
    <?php } } while ($row_Listado1 = mysql_fetch_assoc($Listado1));} ?>
