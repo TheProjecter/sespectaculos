@@ -113,3 +113,8 @@ if($valor=="informacionUsuario"){
 require 'modelos/datosModelo.php';
 require 'vistas/usuarios/datosUsuario.php';
 }
+
+if($valor=="informacionUsuario2"){
+require 'modelos/datosModelo2.php';
+require 'vistas/usuarios/datosUsuario.php';
+}

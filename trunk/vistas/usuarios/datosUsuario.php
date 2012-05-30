@@ -94,7 +94,7 @@ function confirmar ( mensaje ) {
 </div>
 
 <div><br></br></div>
-<div><a href="index.php?controlador=opcionesUsuario&opcion=entradas"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><a href="index.php?controlador=usuarios"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
 <div><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>

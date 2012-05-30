@@ -86,6 +86,7 @@ function confirmar ( mensaje ) {
     <td>Lugar</td>
     <td>Precio</td>
     <td>Estado</td>
+    <td>Inf. Usuarios</td>
    	<td>Eliminar</td>
   </tr>
  
@@ -99,7 +100,8 @@ function confirmar ( mensaje ) {
       <td><?php echo $row_Listado['Lugar']; ?></td>
       <td><?php echo $row_Listado['Precio']; ?></td>
 	  <td><?php echo $row_Listado['estado']; ?></td>
-      <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=ofertas&amp;cod2=<?php echo $row_Listado['dniUsuario']; ?>&amp;cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td>  
+	  <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=informacionUsuario2&amp;cod=<?php echo $row_Listado['codEntrada']?>"><img src="./vistas/images/muñecos.png" title="Interesados"  alt="Interesados"/></a></td>  
+	  <td><a href="index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=ofertas&amp;cod2=<?php echo $row_Listado['dniUsuario']; ?>&amp;cod=<?php echo $row_Listado['codEntrada']; ?>" onclick="return confirmar('¿Está seguro que desea eliminar el registro?')"><img src="./vistas/img/cancel_f2.png" title="ELIMINAR" alt="ELIMINAR"/></a></td>  
     </tr>
    <?php } } while ($row_Listado = mysql_fetch_assoc($Listado));} ?>  
   </table>
