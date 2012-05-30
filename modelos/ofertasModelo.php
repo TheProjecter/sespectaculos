@@ -19,6 +19,7 @@ $Listado = mysql_query($query_limit_Listado, $informeUrb) or die(mysql_error());
 
 $row_Listado = mysql_fetch_assoc($Listado);
 
+
 //Para avanzar y retroceder, flechas
 
 if (isset($_GET['totalRows_Listado'])) {
