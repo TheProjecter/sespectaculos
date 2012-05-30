@@ -6,6 +6,8 @@ $ofertas=$_GET['cod'];
 $alertas=$_GET['cod'];
 $usuarios=$_GET['cod'];
 $interesado=$_GET['cod'];
+$codEntrada=$_GET['cod2'];
+$dni=$_GET['cod2'];
 
 $valor=$_GET['eliminar'];
 //echo "Cat: ".$categoria." Ent: ".$entrada." Ofe: ".$ofertas." usu: ".$usuarios;
@@ -21,7 +23,7 @@ if($valor=="entradas"){
 
 if($valor=="ofertas"){
 	//echo "Ofe: ".$ofertas;
-	$deleteSQL = sprintf("DELETE  FROM ofertas WHERE codEntrada='$ofertas'");
+	$deleteSQL = sprintf("DELETE  FROM ofertas WHERE codEntrada='$ofertas' and dniUsuario='$dni'");
 	mysql_select_db($database_informeUrb, $informeUrb);
 	$Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());	 	
 	$mensaje= '<script name="accion"> alert("Se ha borrado correctamente la oferta");</script>';
@@ -56,11 +58,11 @@ if($valor=="usuarios"){
 
 if($valor=="interesado"){
 	//echo "Ale: ".$alertas;
-	$deleteSQL = sprintf("DELETE  FROM ofertas WHERE dniConsulta='$alertas'");
+	$deleteSQL = sprintf("DELETE  FROM ofertas WHERE dniUsuario='$alertas' and codEntrada='$codEntrada'");
 	mysql_select_db($database_informeUrb, $informeUrb);
 	$Result = mysql_query($deleteSQL, $informeUrb) or die(mysql_error());
 	 	
-	$mensaje= '<script name="accion"> alert("Se ha borrado correctamente la Alerta");</script>';
+	$mensaje= '<script name="accion"> alert("Se ha borrado correctamente la Oferta");</script>';
 	echo $mensaje; 
 }
 ?>  

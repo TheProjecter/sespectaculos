@@ -14,10 +14,10 @@ function confirmar ( mensaje ) {
 	}
 
 function rechazar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=borrar&amp;eliminar=interesado&amp;cod=<?php echo $row_Listado['Dni']; ?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&opcion=borrar&eliminar=interesado&cod2=<?php echo $cod2?>&cod=<?php echo $row_Listado['Dni']; ?>';
 }
 function aceptar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&amp;opcion=ultimo&amp;cod2=<?php echo $cod2?>&amp;cod=<?php echo $row_Listado['Dni'];?>';
+	parent.location.href='index.php?controlador=opcionesUsuario&opcion=ultimo&cod2=<?php echo $cod2?>&cod=<?php echo $row_Listado['Dni'];?>';
 }
 </script>
 </head>
@@ -29,7 +29,7 @@ function aceptar(){
 		<ul>
 			<li><a href="index.php" accesskey="1" title="Inicio">Inicio</a></li>
 			<li><a href="#" accesskey="2" title="Login" onclick="funcion1a()">Login</a></li>
-			<li><a href="index.php?controlador=acceso" accesskey="3" title="Administracion">Administracion	</a></li>
+			<li><a href="index.php?controlador=acceso" accesskey="3" title="Administracion">Administracion</a></li>
 			<li><a href="./vistas/foro/index.php" accesskey="4" title="Sobre Nosotros">Foro</a></li>
 			<li><a href="./vistas/contacto/contactform.htm" accesskey="5" title="Contacta">Contacta</a></li>
 		</ul>

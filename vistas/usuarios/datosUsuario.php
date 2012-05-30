@@ -9,12 +9,9 @@
 <link href="./vistas/css/principal.css" rel="stylesheet" type="text/css" />
 <script language="javascript" src="./vistas/programas.js" type="text/javascript"></script>
 <script type="text/javascript">
-function rechazar(){
-	parent.location.href='index.php?controlador=usuarios';
-}
-function aceptar(){
-	parent.location.href='index.php?controlador=opcionesUsuario&opcion=gestion&email=<?php echo $row_Listado2['Email']?>&entradas=<?php echo $row_Listado['codEntrada']?>';
-}
+function confirmar ( mensaje ) {
+	return confirm( mensaje );
+	}
 </script>
 </head>
 <body>
@@ -57,11 +54,11 @@ function aceptar(){
   <table align="center">
     <tr valign="baseline">
       <td>&nbsp;</td>
-     <td> <input type="submit" class="boton" value="Ingresar"></input></td>
+     <td><input type="submit" class="boton" value="Ingresar"></input></td>
     </tr>
     <?php }else{?>
     <tr><td>
-    <table align="center" width="35%" >
+    <table align="center" width="35%">
     	<tr><td><?php 
     	echo "Usuario:".$_SESSION['usuario'];
     	?>
@@ -71,41 +68,34 @@ function aceptar(){
         <tr><td><a  class="letraLogin" style="text-align: right; color: white;" href="index.php?controlador=salir">Cerrar Seccion</a></td></tr>
     <?php 
     } ?>
-   </table></td></tr>  
+   </table> </td></tr>  
   	</table>
       </form>
   	</div>
 </div>
 <div id="splash"><img src="./vistas/img/Portada.jpg" alt="sespectaculos.com" width="500" height="120" style="margin-left: 15%;" /></div>
-<div><br></br></div>
+<br></br>	
+
 <div id="colTot">
-		<h2  class="section">Datos Compra</h2>
-		<div id="content" style="margin-top: 0.5em;">			
-   			 <div class="div"> <a class="as">Evento: </a>			<a class="bs"><?php echo $row_Listado['Evento']; ?></a></div>
-    		 <div class="div"> <a class="as">Provincia: </a> 		<a class="bs"><?php echo $row_Listado['Provincia']; ?></a></div>
-   			 <div class="div"> <a class="as">Lugar: </a>			<a class="bs"><?php echo $row_Listado['Lugar']; ?></a></div>
-    		 <div class="div"> <a class="as">Fecha: </a>			<a class="bs"><?php echo $row_Listado['Fecha']; ?></a></div>
-   			 <div class="div"> <a class="as">Precio: </a> 		    <a class="bs"><?php echo $row_Listado['Precio']; ?></a></div>
-   			 <div class="div"> <a class="as">Fila: </a> 			<a class="bs"><?php echo $row_Listado['Fila']; ?></a></div>
-   			 <div class="div"> <a class="as">Asiento: </a> 		    <a class="bs"><?php echo $row_Listado['Asiento']; ?></a></div>
-   			 <div class="div"> <a class="as">Genero</a> 		    <a class="bs"><?php echo $row_Listado['Genero']; ?></a></div>
-   			 <div class="div"> <a class="as">Descripcion: </a> 		<a class="bs"><?php echo $row_Listado['Descripcion']; ?></a></div>
+		<h2  class="section">Datos Usuario</h2>
+		<div id="contentI" style="margin-top: 0.5em;">			
+   			 <div class="datos"> <a class="as">Nombre: </a>		<a class="bs"><?php echo $row_Listado['Nombre']; ?></a></div>
+    		 <div class="datos"> <a class="as">Apellidos: </a> 	<a class="bs"><?php echo $row_Listado['Apellidos']; ?></a></div>
+   			 <div class="datos"> <a class="as">Edad: </a>		<a class="bs"><?php echo $row_Listado['Edad']; ?></a></div>
+    		 <div class="datos"> <a class="as">Direccion: </a>	<a class="bs"><?php echo $row_Listado['Direccion']; ?></a></div>
+   			 <div class="datos"> <a class="as">Localidad: </a> 	<a class="bs"><?php echo $row_Listado['Localidad']; ?></a></div>
+   			 <div class="datos"> <a class="as">Provincia: </a> 	<a class="bs"><?php echo $row_Listado['Provincia']; ?></a></div>
+   			 <div class="datos"> <a class="as">Cod. Postal: </a> <a class="bs"><?php echo $row_Listado['Cp']; ?></a></div>
+   			 <div class="datos"> <a class="as">Telefono: </a> 	<a class="bs"><?php echo $row_Listado['Telefono']; ?></a></div>
+   			 <div class="datos"> <a class="as">Email:</a> 		<a class="bs"><?php echo $row_Listado['Email']; ?></a></div>
+   			 <div class="datos"> <a class="as">Puntuacion:</a> 	<a class="bs"><?php echo $row_Listado['puntuacion']; ?></a></div>
    		</div>
-   		<br />
-   		<hr />
-   		<br />
-   			<h2  class="section">Datos Vendedor</h2>
-		<div id="contentI" style="margin-top: 0.5em;">
-   			 <div class="div"> <a class="as">Nombre: </a> 		<a class="bs"><?php echo $row_Listado2['Nombre']; ?></a></div>
-   			 <div class="div"> <a class="as">Apellidos: </a> 	<a class="bs"><?php echo $row_Listado2['Apellidos']; ?></a></div>
-   			 <div class="div"> <a class="as">Dni: </a> 			<a class="bs"><?php echo $row_Listado2['Dni']; ?></a></div>		 
+   		
 </div>
-		</div>
-<div id="contentII">
-<input type="button" title="Rechazar compra" value="Cancelar" onclick="rechazar()" style="margin-top: 50px;" />
-<input type="button" title="Aceptar Compra" value="Peticion Usuario" onclick="aceptar()" style="margin-top: 50px;" />
-</div>
-<div><br></br><br></br><br></br></div>
+
+<div><br></br></div>
+<div><a href="index.php?controlador=opcionesUsuario&opcion=entradas"><img alt="Volver" height="60" style="margin-left: 20%;" src="./vistas/images/return.png"></img></a></div>
+<div><br></br><br></br></div>
 <div id="footer">
 	<p>Copyright &copy; 2011 . Designed by <a> <strong>Melli</strong></a></p>
 </div>
@@ -127,4 +117,4 @@ function aceptar(){
 </p>     
 </div>
 </body>
-</html>
+</html> 
