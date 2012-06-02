@@ -23,7 +23,7 @@ $row_Listado1 = mysql_fetch_assoc($Listado1);
 
 
 mysql_select_db($database_informeUrb,$informeUrb);
-$query_Listado2="select *, count(O.codEntrada) from Ofertas O, Entradas E where E.codEntrada=O.codEntrada group by O.codEntrada having count(O.codEntrada) ORDER BY Count(O.codEntrada) DESC Limit 6   ";
+$query_Listado2="select *, count(O.codEntrada) from ofertas O, entradas E where E.codEntrada=O.codEntrada group by O.codEntrada having count(O.codEntrada) ORDER BY Count(O.codEntrada) DESC Limit 6   ";
 $Listado2 = mysql_query($query_Listado2, $informeUrb) or die(mysql_error());
 $row_Listado2 = mysql_fetch_assoc($Listado2); 
 
