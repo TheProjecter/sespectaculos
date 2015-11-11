@@ -1,0 +1,1 @@
+proyecto fin de carrera que intenta simular una aplicación web donde poner en contacto a personas para que puedan interactuar entre ellas sobre ciertas entradas de espectáculos que poseen
